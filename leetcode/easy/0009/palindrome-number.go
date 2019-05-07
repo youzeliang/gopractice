@@ -1,10 +1,7 @@
 package problem0009
 
-import (
-	"strconv"
-)
+import "strconv"
 
-// 转化为字符串来求
 func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
@@ -21,7 +18,6 @@ func isPalindrome(x int) bool {
 	return true
 }
 
-//  利用不断求余
 func isPalindrome1(x int) bool {
 	if x < 0 {
 		return false
