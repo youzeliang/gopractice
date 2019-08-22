@@ -39,5 +39,5 @@ func twoSum(nums []int, target int) []int {
 		index[b] = i
 	}
 
-	return []int{}
+	return nil
 }
