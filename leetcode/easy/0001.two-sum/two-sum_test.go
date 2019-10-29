@@ -22,6 +22,9 @@ type question struct {
 func Test_OK(t *testing.T) {
 	ast := assert.New(t)
 
+	s := make([]string, 0)
+	s = append(s)
+
 	qs := []question{
 		question{
 			p: para{
