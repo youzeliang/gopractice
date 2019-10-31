@@ -1,27 +1,24 @@
 package main
 
+import (
+	"fmt"
+	"sort"
+)
+
 func main() {
 
-	a := [2][2]int{
-		{0, 1}, /*  第一行索引为 0 */
-		{4, 5}, /*  第二行索引为 1 */
+	nums := []int{2, 2, 3, 1}
+
+	sort.Ints(nums)
+
+	for i, j := range nums {
+
 	}
 
-	originMap := make(map[int]int)
-
-	for _, j := range a {
-		for n := range j {
-
-			originMap[j[n]-j[n-1]] = j[n] - j[n-1]
-			if _, ok := originMap[j[n]-j[n-1]]; ok {
-
-			}
-
-			//fmt.Println("11",n)
-
-		}
-
-		//fmt.Println(i)
-		//fmt.Println(j)
+	if len(nums) <= 2 {
+		fmt.Println(nums[len(nums)-3])
 	}
+
+	fmt.Println(nums[len(nums)-3])
+
 }
