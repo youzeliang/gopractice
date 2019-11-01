@@ -1,24 +1,31 @@
 package main
 
-import (
-	"fmt"
-	"sort"
-)
-
 func main() {
 
-	nums := []int{2, 2, 3, 1}
+	//dat, err := ioutil.ReadFile(".gitignore")
+	//if err != nil {
+	//	fmt.Println(1)
+	//}
+	//
+	//fmt.Println(string(dat))
 
-	sort.Ints(nums)
+	//f, _ := os.Open("./main.go")
+	//defer f.Close()
+	//
+	//b1 := make([]byte, 2)
+	//
+	//_, _ = f.ReadAt(b1, 5)
+	//fmt.Println(string(b1))
 
-	for i, j := range nums {
+}
 
-	}
+func findWords(words []string) []string {
 
-	if len(nums) <= 2 {
-		fmt.Println(nums[len(nums)-3])
-	}
+	key1 := "asdfghjklASDFGHJKL" //大小写都放进去就不用在后面再区分了
+	key2 := "qwertyuiopQWERTYUIOP"
+	dic3 := "zxcvbnmZXCVBNM"
 
-	fmt.Println(nums[len(nums)-3])
+	keyString := "qa"
 
+	return nil
 }

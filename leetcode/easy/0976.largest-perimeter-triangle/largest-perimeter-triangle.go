@@ -1,5 +1,7 @@
 package _976_largest_perimeter_triangle
 
+import "sort"
+
 //# [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)
 //
 //Given an array A of positive lengths, return the largest perimeter of a triangle with non-zero area, formed from 3 of these lengths.
@@ -41,6 +43,15 @@ package _976_largest_perimeter_triangle
 
 func largestPerimeter(A []int) int {
 
+	if len(A) <= 2 {
+		return 0
+	}
+
+	sort.Ints(A)
+
+	for i, j := range A {
+
+	}
 }
 
 func triangle(a, b, c int) bool {
