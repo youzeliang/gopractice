@@ -1,31 +1,49 @@
 package main
 
-func main() {
+import "fmt"
 
-	//dat, err := ioutil.ReadFile(".gitignore")
-	//if err != nil {
-	//	fmt.Println(1)
-	//}
-	//
-	//fmt.Println(string(dat))
-
-	//f, _ := os.Open("./main.go")
-	//defer f.Close()
-	//
-	//b1 := make([]byte, 2)
-	//
-	//_, _ = f.ReadAt(b1, 5)
-	//fmt.Println(string(b1))
-
+func fibonacci(c, quit chan int) {
+	x, y := 1, 1
+	for {
+		select {
+		case c <- x:
+			x, y = y, x + y
+		case <-quit:
+			fmt.Println("quit")
+			return
+		}
+	}
 }
 
-func findWords(words []string) []string {
+func main() {
+	//c := make(chan int)
+	//quit := make(chan int)
+	//go func() {
+	//	for i := 0; i < 10; i++ {
+	//		fmt.Println(<-c)
+	//	}
+	//	quit <- 0
+	//}()
+	//fibonacci(c, quit)
 
-	key1 := "asdfghjklASDFGHJKL" //大小写都放进去就不用在后面再区分了
-	key2 := "qwertyuiopQWERTYUIOP"
-	dic3 := "zxcvbnmZXCVBNM"
 
-	keyString := "qa"
+	//fmt.Println("---------------------------")
+	//
+	//s := "good bye"
+	//var p *string = &s
+	//*p = "ciao"
+	//fmt.Printf("Here is the pointer p: %p\n", p) // prints address
+	//fmt.Printf("Here is the string *p: %s\n", *p) // prints string
+	//fmt.Printf("Here is the string s: %s\n", s) // prints same string
 
-	return nil
+
+	n := 0
+	reply := &n
+	Multiply(10, 5, reply)
+	fmt.Println("Multiply:", &reply) // Multiply: 50
+}
+
+// this function changes reply:
+func Multiply(a, b int, reply *int) {
+	*reply = a * b
 }
