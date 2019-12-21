@@ -1,7 +1,8 @@
 package problem0001
 
 import (
-	"github.com/stretchr/testify/assert"
+	"fmt"
+	"strconv"
 	"testing"
 )
 
@@ -20,34 +21,17 @@ type question struct {
 }
 
 func Test_OK(t *testing.T) {
-	ast := assert.New(t)
+	a := 4141
+	for a != 0 {
 
-	s := make([]string, 0)
-	s = append(s)
+		a /= len(strconv.Itoa(a))*10
 
-	qs := []question{
-		question{
-			p: para{
-				one: []int{3, 2, 4},
-				two: 6,
-			},
-			a: ans{
-				one: []int{1, 2},
-			},
-		},
-		question{
-			p: para{
-				one: []int{3, 2, 4},
-				two: 8,
-			},
-			a: ans{
-				one: nil,
-			},
-		},
+		fmt.Println(a)
+		break
+
 	}
 
-	for _, q := range qs {
-		a, p := q.a, q.p
-		ast.Equal(a.one, twoSum(p.one, p.two), "输入:%v", p)
-	}
+	//a %= 10
+	//a /=10
+	//println(a)
 }
