@@ -1,5 +1,7 @@
 package main
 
+import "bytes"
+
 type User struct {
 	UserId   int
 	UserName string
@@ -32,10 +34,37 @@ const (
 
 
 func main() {
-	var a = 1
-	if a != 1 {
-		println("oh no")
+
+
+	sb := []byte("da")
+	st := []byte("aa")
+
+println(	bytes.IndexByte(sb, sb[1]))
+println(	bytes.IndexByte(st, st[1]))
+
+
+
+}
+
+func isIsomorphic(s string, t string) bool {
+	sb := []byte(s)
+	st := []byte(t)
+
+	if len(sb) == 0 && len(st) == 0 {
+		return true
 	}
+
+	if len(sb) != len(st) {
+		return false
+	}
+
+	for i := 0; i < len(sb); i++ {
+		if bytes.IndexByte(sb, sb[i]) != bytes.IndexByte(st, st[i]) {
+			return false
+		}
+	}
+
+	return true
 }
 
 func change(s ...int) {

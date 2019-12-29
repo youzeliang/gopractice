@@ -21,11 +21,21 @@ package _202_happy_number
 //
 
 func isHappy(n int) bool {
-
+	// 开一个 map 判断是否循环
+	hash := make(map[int]bool)
+	for n!=1 {
+		// 出现了循环，证明不是快乐数
+		if _,ok := hash[n]; ok {
+			return false
+		}
+		hash[n] = true
+		next := 0
+		// 计算下一个数字
+		for n!=0 {
+			next += (n%10) * (n%10)
+			n /= 10
+		}
+		n = next
+	}
 	return true
 }
-
-//
-//func ()  {
-//
-//}
