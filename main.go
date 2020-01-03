@@ -6,14 +6,12 @@ import (
 	"strconv"
 )
 
-
-
 func fibonacci(c, quit chan int) {
 	x, y := 1, 1
 	for {
 		select {
 		case c <- x:
-			x, y = y, x + y
+			x, y = y, x+y
 		case <-quit:
 			fmt.Println("quit")
 			return
@@ -21,8 +19,7 @@ func fibonacci(c, quit chan int) {
 	}
 }
 
-var ch chan int  = make(chan int)
-
+var ch chan int = make(chan int)
 
 func findSpecialInteger(arr []int) int {
 
@@ -34,7 +31,7 @@ func findSpecialInteger(arr []int) int {
 	temp := -1
 	for _, j := range arr {
 		if j == temp {
-			count+=1
+			count += 1
 		} else {
 			temp = j
 			count = 0
@@ -56,8 +53,7 @@ func findNumbers(nums []int) int {
 
 func main() {
 
-
-	a := []int{1,2,3}
+	a := []int{1, 2, 3}
 
 	sort.Ints()
 	findNumbers(a)
@@ -71,7 +67,6 @@ func main() {
 	//}()
 	//fibonacci(c, quit)
 
-
 	//fmt.Println("---------------------------")
 	//
 	//s := "good bye"
@@ -81,7 +76,6 @@ func main() {
 	//fmt.Printf("Here is the string *p: %s\n", *p) // prints string
 	//fmt.Printf("Here is the string s: %s\n", s) // prints same string
 
-
 	//n := 0
 	//reply := &n
 	//Multiply(10, 5, reply)
@@ -89,7 +83,7 @@ func main() {
 
 }
 
-func testChan()  {
+func testChan() {
 	var ch2 chan string
 	ch2 = make(chan string)
 	var ch3 chan string
@@ -103,7 +97,7 @@ func testChan()  {
 	fmt.Printf("有缓冲 局部变量 chan ch5 : %v\n", ch5)
 }
 
-func TestSlice()  {
+func TestSlice() {
 
 	m := map[string]string{"q": "q", "w": "w", "e": "e", "r": "r", "t": "t", "y": "y"}
 	var slice []string
@@ -116,8 +110,6 @@ func TestSlice()  {
 	for _, v := range slice {
 		fmt.Println(m[v])
 	}
-
-
 
 }
 

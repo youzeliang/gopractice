@@ -10,7 +10,7 @@ func findSpecialInteger(arr []int) int {
 	temp := arr[0]
 	for _, j := range arr {
 		if j == temp {
-			count+=1
+			count += 1
 		} else {
 			temp = j
 			count = 0

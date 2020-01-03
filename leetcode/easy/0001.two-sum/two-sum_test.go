@@ -24,7 +24,7 @@ func Test_OK(t *testing.T) {
 	a := 4141
 	for a != 0 {
 
-		a /= len(strconv.Itoa(a))*10
+		a /= len(strconv.Itoa(a)) * 10
 
 		fmt.Println(a)
 		break

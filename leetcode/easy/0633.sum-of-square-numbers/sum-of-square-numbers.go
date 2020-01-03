@@ -9,6 +9,7 @@ func judgeSquareSum(c int) bool {
 		if isSquare(c - a*a) {
 			return true
 		}
+
 		a--
 	}
 

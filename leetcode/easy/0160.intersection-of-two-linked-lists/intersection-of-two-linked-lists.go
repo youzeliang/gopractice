@@ -15,7 +15,7 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 		}
 
 		a, b = a.Next, b.Next
-		if a == nil && ! hasLinkedToB {
+		if a == nil && !hasLinkedToB {
 			a = headB
 			hasLinkedToB = true
 		}

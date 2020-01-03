@@ -155,5 +155,3 @@ func main() {
 	fmt.Println("length:", GetLength(&head))
 	os.Exit(0)
 }
-
-

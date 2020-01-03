@@ -21,4 +21,3 @@ func lengthOfLastWord(s string) int {
 
 	return res
 }
-

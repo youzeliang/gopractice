@@ -33,5 +33,3 @@ func isPalindrome1(x int) bool {
 	}
 	return o == r
 }
-
-
