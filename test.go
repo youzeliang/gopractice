@@ -1,6 +1,9 @@
 package main
 
-import "bytes"
+import (
+	"bytes"
+	"fmt"
+)
 
 type User struct {
 	UserId   int
@@ -36,12 +39,15 @@ const (
 func main() {
 
 
-	sb := []byte("da")
-	st := []byte("aa")
+//	sb := []byte("da")
+	////	st := []byte("aa")
+	////
+	////println(	bytes.IndexByte(sb, sb[1]))
+	////println(	bytes.IndexByte(st, st[1]))
 
-println(	bytes.IndexByte(sb, sb[1]))
-println(	bytes.IndexByte(st, st[1]))
-
+	for  {
+		fmt.Println(1)
+	}
 
 
 }
