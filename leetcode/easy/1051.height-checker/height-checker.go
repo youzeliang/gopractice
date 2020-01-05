@@ -24,6 +24,7 @@ package problem1051
 
 import "sort"
 
+// 解法1
 func heightChecker(heights []int) int {
 	sorted := make([]int, len(heights))
 
@@ -41,3 +42,25 @@ func heightChecker(heights []int) int {
 
 	return count
 }
+
+
+// 解法2
+
+//func heightChecker(heights []int) int {
+//	count := 0
+//	hc := make([]int, 101)
+//	for _, v := range heights {
+//		hc[v]++
+//	}
+//	j := 0
+//	for i := 1;i < len(hc); i++ {
+//		for hc[i] > 0 {
+//			if heights[j] != i {
+//				count++
+//			}
+//			j++
+//			hc[i]--
+//		}
+//	}
+//	return count
+//}
