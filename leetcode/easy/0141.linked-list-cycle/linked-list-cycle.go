@@ -6,7 +6,6 @@ package _141_linked_list_cycle
 //
 //快指针一次走两步，慢指针一次走一步，如果链表有环，那么两个指针始终会相遇。
 
-
 type ListNode struct {
 	Val  int
 	Next *ListNode

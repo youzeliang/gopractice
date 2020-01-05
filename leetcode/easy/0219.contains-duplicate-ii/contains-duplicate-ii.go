@@ -17,4 +17,3 @@ func containsNearbyDuplicate(nums []int, k int) bool {
 
 	return false
 }
-

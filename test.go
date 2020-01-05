@@ -24,29 +24,27 @@ func hello() []string {
 type Person struct {
 	age int
 }
+
 const (
 	a = iota
 	b = iota
 )
 const (
-	name = "name"
+	name     = "name"
 	fdfsdfsd = "fafa"
-	c    = iota
-	d    = iota
+	c        = iota
+	d        = iota
 )
-
 
 func main() {
 
-
-//	sb := []byte("da")
+	//	sb := []byte("da")
 	////	st := []byte("aa")
 	////
 	////println(	bytes.IndexByte(sb, sb[1]))
 	////println(	bytes.IndexByte(st, st[1]))
 
-		fmt.Println(1)
-
+	fmt.Println(1)
 
 }
 
@@ -72,7 +70,7 @@ func isIsomorphic(s string, t string) bool {
 }
 
 func change(s ...int) {
-	s = append(s,3)
+	s = append(s, 3)
 }
 
 type S struct {

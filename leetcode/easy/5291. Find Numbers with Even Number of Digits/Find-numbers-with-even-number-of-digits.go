@@ -2,7 +2,6 @@ package _291__Find_Numbers_with_Even_Number_of_Digits
 
 import "strconv"
 
-
 func findNumbers(nums []int) int {
 
 	res := 0

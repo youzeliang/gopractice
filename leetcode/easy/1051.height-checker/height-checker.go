@@ -43,7 +43,6 @@ func heightChecker(heights []int) int {
 	return count
 }
 
-
 // 解法2
 
 //func heightChecker(heights []int) int {

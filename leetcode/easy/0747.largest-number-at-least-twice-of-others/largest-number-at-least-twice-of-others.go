@@ -1,6 +1,5 @@
 package _747_largest_number_at_least_twice_of_others
 
-
 func dominantIndex(nums []int) int {
 	n := len(nums)
 	if n == 1 {
@@ -13,7 +12,6 @@ func dominantIndex(nums []int) int {
 	if nums[i1] < nums[i2] {
 		i1, i2 = i2, i1
 	}
-
 
 	for i := 2; i < n; i++ {
 		if nums[i1] < nums[i] {

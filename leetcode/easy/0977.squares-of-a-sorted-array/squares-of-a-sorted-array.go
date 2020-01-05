@@ -1,6 +1,5 @@
 package _977_squares_of_a_sorted_array
 
-
 // 解法1
 //func sortedSquares(A []int) []int {
 //	arr := make([]int, 0)
@@ -12,8 +11,6 @@ package _977_squares_of_a_sorted_array
 //
 //    return arr
 //}
-
-
 
 // 解法2
 func sortedSquares(A []int) []int {

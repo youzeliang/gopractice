@@ -6,8 +6,6 @@ package number
 // 解题思路
 // 把原整数的所有数字从左到右都进行比较，如果发现某一位的数字大于它右边的数字，那么在删除该数字后，必然会使该位数的值降低，因为右面比它小的数字顶替了它的位置
 
-
-
 type Stack []byte
 
 func (s *Stack) Push(v byte) {
@@ -16,13 +14,13 @@ func (s *Stack) Push(v byte) {
 
 func (s *Stack) Pop() byte {
 	l := len(*s)
-	v := (*s)[l - 1]
-	*s = (*s)[:l - 1]
+	v := (*s)[l-1]
+	*s = (*s)[:l-1]
 	return v
 }
 
 func (s *Stack) Top() byte {
-	v := (*s)[len(*s) - 1]
+	v := (*s)[len(*s)-1]
 	return v
 }
 
@@ -48,7 +46,7 @@ func removeKdigits(num string, k int) string {
 
 	// Trim prefix '0'
 	var i int
-	for i < s.Len() - 1 && (*s)[i] == '0' {
+	for i < s.Len()-1 && (*s)[i] == '0' {
 		i++
 	}
 	*s = (*s)[i:]

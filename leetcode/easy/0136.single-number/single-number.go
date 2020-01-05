@@ -1,6 +1,5 @@
 package _136_single_number
 
-
 func singleNumber(nums []int) int {
 	res := 0
 	for _, v := range nums {

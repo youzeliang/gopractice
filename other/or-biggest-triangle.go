@@ -2,7 +2,6 @@ package other
 
 import "sort"
 
-
 // 地址 https://blog.csdn.net/zrds2e/article/details/77763392
 
 // 暴力解法 n³
