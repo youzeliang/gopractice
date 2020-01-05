@@ -57,10 +57,13 @@ func findNumbers(nums []int) int {
 func main() {
 
 
-	a := []int{1,2,3}
 
-	sort.Ints()
-	findNumbers(a)
+	fmt.Println(111)
+
+	// a := []int{1,2,3}
+
+	// sort.Ints()
+	// findNumbers(a)
 	//c := make(chan int)
 	//quit := make(chan int)
 	//go func() {
