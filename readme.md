@@ -3,9 +3,4 @@
 
 ### LeetCode
 
-
-1.
-
-
-
-
+LeetCode go语言题解
