@@ -1,11 +1,10 @@
 package helper
 
 import (
+	"github.com/jinzhu/gorm"
 	"github.com/youzeliang/gopractice/base"
 	"github.com/youzeliang/gopractice/conf"
 	"time"
-	"github.com/jinzhu/gorm"
-
 )
 
 

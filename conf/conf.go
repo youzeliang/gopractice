@@ -1,6 +1,8 @@
 package conf
 
 import (
+	"github.com/youzeliang/gopractice/base"
+	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"path"
 	"runtime"
@@ -64,4 +66,3 @@ func getCurrentPath() string {
 	_, filename, _, _ := runtime.Caller(1)
 	return path.Dir(filename)
 }
-

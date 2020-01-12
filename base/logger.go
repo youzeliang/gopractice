@@ -3,13 +3,11 @@ package base
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
 	"os"
 	"strings"
 	"time"
-	"github.com/sirupsen/logrus"
-	"github.com/gin-gonic/gin"
-
-
 )
 
 const NOLOGFlAG string = "NOLOGFlAG"
@@ -57,7 +55,7 @@ func InitLog(loglevel string) {
 
 func Logger(ctx *gin.Context) *logrus.Entry {
 	entry := logrus.NewEntry(logrus.StandardLogger()).WithFields(logrus.Fields{
-		"requestId": GetRequestId(ctx),
+		//"requestId": GetRequestId(ctx),
 	})
 
 	return entry

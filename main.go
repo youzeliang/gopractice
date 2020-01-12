@@ -1,11 +1,11 @@
 package main
 
 import (
+	"github.com/fvbock/endless"
 	"github.com/gin-gonic/gin"
 	"github.com/youzeliang/gopractice/conf"
 	"github.com/youzeliang/gopractice/helper"
-	"github.com/fvbock/endless"
-
+	"github.com/youzeliang/gopractice/router"
 )
 
 func main()  {
@@ -14,6 +14,8 @@ func main()  {
 
 
 	helper.InitMysql()
+	 router.Crontab(r)
+
 
 
 	endless.ListenAndServe(":"+conf.Conf.Port, r)
