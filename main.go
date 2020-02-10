@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"sort"
-	"strconv"
 )
 
 func fibonacci(c, quit chan int) {
@@ -48,12 +47,30 @@ func findSpecialInteger(arr []int) int {
 
 func findNumbers(nums []int) int {
 
-	strconv.Itoa()
+	return 0
+}
+
+func find() {
+
+	a := 123456789
+
+	//two := (a/10000000)%10
+
+	// four := two
+	c := (a / 100000) % 10
+
+	//for i := 100000000; i < 999999999;i++{
+	//
+	//}
+	fmt.Println(c)
+
+	fmt.Println((1 + 100) * 100 / 2)
 }
 
 func main() {
 
 	fmt.Println(111)
+	//find()
 
 	// a := []int{1,2,3}
 
@@ -83,7 +100,9 @@ func main() {
 	//Multiply(10, 5, reply)
 	//fmt.Println("Multiply:", &reply) // Multiply: 50
 
+	minSteps("leetcode", "practice")
 }
+
 
 func testChan() {
 	var ch2 chan string

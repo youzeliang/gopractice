@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"strings"
 )
 
 type User struct {
@@ -45,7 +46,20 @@ func main() {
 	////println(	bytes.IndexByte(st, st[1]))
 
 	fmt.Println(1)
+	minSteps("bab","aba")
 
+}
+
+func minSteps(s string, t string) int {
+
+	i := 0
+	for _ ,j := range t{
+		if !strings.Contains(string(j),s){
+			i++
+		}
+	}
+
+	return len(s)-i
 }
 
 func isIsomorphic(s string, t string) bool {
