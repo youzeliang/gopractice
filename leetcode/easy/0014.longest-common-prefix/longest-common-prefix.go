@@ -1,5 +1,7 @@
 package _014_longest_common_prefix
 
+import "time"
+
 func longestCommonPrefix(strs []string) string {
 	short := shortest(strs)
 
@@ -29,3 +31,19 @@ func shortest(strs []string) string {
 
 	return res
 }
+
+
+func daysBetweenDates(date1 string, date2 string) int {
+
+
+		a,_:=time.Parse(date1,date1)
+		println(a)
+
+
+
+}
+
+
+
+
+

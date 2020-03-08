@@ -1,5 +1,7 @@
 package _905_sort_array_by_parity
 
+import "math"
+
 //# [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)
 //
 //## 题目
@@ -35,6 +37,19 @@ func sortArrayByParity(A []int) []int {
 			newArray = append(newArray, m)
 		}
 	}
+	var a = math.MaxInt32
 
 	return newArray
+}
+
+// 只要把奇数和偶数分开就行。假定把偶数放在前面，初始一个起始位置”c”，遍历数组“A”如果当前值为偶数即和“c”的值交换，并且“c"本身加一。
+func sortArrayByParity2(A []int) []int {
+	c := 0
+	for i := range A {
+		if A[i]%2 == 0 {
+			A[c], A[i] = A[i], A[c]
+			c++
+		}
+	}
+	return A
 }

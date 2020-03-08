@@ -22,3 +22,40 @@ package _922_sort_array_by_parity_ii
 //1. `2 <= A.length <= 20000`
 //1. `A.length % 2 == 0`
 //1. `0 <= A[i] <= 1000`
+
+func sortArrayByParityII(A []int) []int {
+	size := len(A)
+	res := make([]int, size)
+	even, odd := 0, 1
+
+	for _, a := range A {
+		if a%2 == 0 {
+			res[even] = a
+			even += 2
+		} else {
+			res[odd] = a
+			odd += 2
+		}
+	}
+
+	return res
+}
+
+// 不使用额外空间的情况下
+func sortArrayByParityII2(A []int) []int {
+	j := 1
+	for i := 0; i < len(A); i += 2 {
+		if A[i]%2 == 1 { //j
+			for A[j]%2 == 1 {
+				j += 2
+			}
+			//j 是o
+			t := A[i]
+			A[i] = A[j]
+			A[j] = t
+		}
+
+	}
+	return A
+
+}
