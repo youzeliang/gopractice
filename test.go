@@ -100,7 +100,21 @@ func main() {
 
 	//smallerNumbersThanCurrent2([]int{3, 4, 5})
 	//majorityElement([]int{1, 1, 2, 3})
-	ttt()
+	ta()
+}
+
+func ta()  {
+	n := 1
+	println(int(math.Pow(10,float64(n))))
+}
+
+func printNumbers(n int) []int {
+	var res []int
+	l := int(math.Pow(10,float64(n))) - 1
+	for i :=1;i <= l;i++{
+		res = append(res,i)
+	}
+	return res
 }
 
 func ttt() {

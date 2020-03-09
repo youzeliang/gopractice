@@ -1,6 +1,8 @@
 package _414_third_maximum_number
 
-import "math"
+import (
+	"math"
+)
 
 //
 //# [414. Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)
@@ -63,3 +65,4 @@ func thirdMax(nums []int) int {
 
 	return max3
 }
+
