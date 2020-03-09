@@ -99,16 +99,45 @@ func smallerNumbersThanCurrent2(nums []int) {
 func main() {
 
 	//smallerNumbersThanCurrent2([]int{3, 4, 5})
-	arrayPairSum([]int{1,4,2,3})
+	//majorityElement([]int{1, 1, 2, 3})
+	ttt()
+}
+
+func ttt() {
+	//res := make([]int, 5)
+
+	var res = []int{1, 1, 2, 2, 3, 4, 5}
+
+	for i := 0; i < 7; i++ {
+		res[i]++
+	}
+
+	for _, j := range res {
+		println("-----", j)
+	}
+}
+
+func majorityElement(nums []int) int {
+	numLens := len(nums)
+	res := make(map[int]int, numLens)
+	for _, v := range nums {
+		res[v]++
+	}
+
+	for _, j := range res {
+		println("-----", j)
+	}
+
+	return -1
 }
 
 func arrayPairSum(nums []int) int {
 	res := 0
 
-	for i := 1; i < len(nums)+1; i+=2 {
+	for i := 1; i < len(nums)+1; i += 2 {
 		if nums[i] > nums[i-1] {
 			res += nums[i-1]
-		}else{
+		} else {
 			res += nums[i]
 		}
 	}
