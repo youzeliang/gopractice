@@ -42,23 +42,11 @@ import "sort"
 //- 1 <= A[i] <= 10^6
 
 func largestPerimeter(A []int) int {
-
-	if len(A) <= 2 {
-		return 0
-	}
-
 	sort.Ints(A)
-
-	for i, j := range A {
-
+	for i := len(A) - 1; i-2 >= 0; i-- {
+		if A[i] < A[i-1]+A[i-2] {
+			return A[i] + A[i-1] + A[i-2]
+		}
 	}
-}
-
-func triangle(a, b, c int) bool {
-
-	if a+b > c && a+c > b && b+c > a {
-		return true
-	}
-
-	return false
+	return 0
 }
