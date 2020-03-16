@@ -21,7 +21,6 @@ func jump(n int) bool {
 		}
 	}
 
-
 	return true
 
 }

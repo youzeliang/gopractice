@@ -103,7 +103,6 @@ func main() {
 	minSteps("leetcode", "practice")
 }
 
-
 func testChan() {
 	var ch2 chan string
 	ch2 = make(chan string)

@@ -1,6 +1,5 @@
 package _365_how_many_numbers_are_smaller_than_the_current_number
 
-
 // https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number/
 
 // 暴力法

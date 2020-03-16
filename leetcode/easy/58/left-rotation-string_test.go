@@ -21,44 +21,42 @@ func Test_reverseLeftWords(t *testing.T) {
 	}
 
 	//maxEvents(a)
-	c := make([]int,0)
+	c := make([]int, 0)
 
-	for _,j  := range a {
-		for m,n := range j{
-			if m ==1{
+	for _, j := range a {
+		for m, n := range j {
+			if m == 1 {
 				c = append(c, n)
 			}
 		}
 	}
 
 	sort.Ints(c)
-	for _,j := range c{
+	for _, j := range c {
 		println(j)
 	}
-	}
+}
 
 func maxEvents(events [][]int) int {
 
-	a := make([]int,0)
-	b :=make([]int,0)
+	a := make([]int, 0)
+	b := make([]int, 0)
 
-	for _,j  := range events {
-		for m,n := range j{
-			if m ==0{
+	for _, j := range events {
+		for m, n := range j {
+			if m == 0 {
 				a = append(a, n)
-			}else {
+			} else {
 				b = append(b, n)
 			}
 		}
 	}
 
-
-
-	return min(a[len(a)-1]-a[0]+1,len(events))
+	return min(a[len(a)-1]-a[0]+1, len(events))
 
 }
 
-func min(a,b int)int  {
+func min(a, b int) int {
 	if a > b {
 		return b
 	}

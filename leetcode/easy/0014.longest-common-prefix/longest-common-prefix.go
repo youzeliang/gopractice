@@ -32,18 +32,9 @@ func shortest(strs []string) string {
 	return res
 }
 
-
 func daysBetweenDates(date1 string, date2 string) int {
 
-
-		a,_:=time.Parse(date1,date1)
-		println(a)
-
-
+	a, _ := time.Parse(date1, date1)
+	println(a)
 
 }
-
-
-
-
-

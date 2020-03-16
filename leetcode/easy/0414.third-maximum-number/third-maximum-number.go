@@ -65,4 +65,3 @@ func thirdMax(nums []int) int {
 
 	return max3
 }
-

@@ -103,16 +103,16 @@ func main() {
 	ta()
 }
 
-func ta()  {
+func ta() {
 	n := 1
-	println(int(math.Pow(10,float64(n))))
+	println(int(math.Pow(10, float64(n))))
 }
 
 func printNumbers(n int) []int {
 	var res []int
-	l := int(math.Pow(10,float64(n))) - 1
-	for i :=1;i <= l;i++{
-		res = append(res,i)
+	l := int(math.Pow(10, float64(n))) - 1
+	for i := 1; i <= l; i++ {
+		res = append(res, i)
 	}
 	return res
 }
@@ -380,4 +380,26 @@ func minTimeToVisitAllPoints(points [][]int) int {
 		sum += temp
 	}
 	return sum
+}
+
+func containsNearbyAlmostDuplicate(nums []int, k int, t int) bool {
+
+	l := len(nums)
+	for i := 0; i < l; i++ {
+		if i+k < l {
+			if abs(nums[i], nums[i+k]) == t {
+				return true
+			}
+		}
+	}
+
+	return false
+}
+
+func abs(a, b int) int {
+	if a-b > 0 {
+		return a - b
+	}
+
+	return b - a
 }

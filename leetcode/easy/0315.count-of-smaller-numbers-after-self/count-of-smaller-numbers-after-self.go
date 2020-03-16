@@ -26,8 +26,6 @@ func countSmaller(nums []int) []int {
 func luckyNumbers(matrix [][]int) []int {
 	var res []int
 
-
-
 	l := len(matrix)
 	for i := 0; i < l; i++ {
 		min := math.MaxInt32

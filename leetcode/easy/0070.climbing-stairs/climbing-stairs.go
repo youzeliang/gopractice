@@ -15,8 +15,6 @@ func climbStairs(n int) int {
 	return tempMap[n]
 }
 
-
-
 //方法2 动态规划 + 优化
 func climb4(n int) int {
 	if n == 1 {
@@ -24,7 +22,7 @@ func climb4(n int) int {
 	}
 	one, two := 1, 2
 	for i := 3; i <= n; i++ {
-		one, two = two, one + two
+		one, two = two, one+two
 	}
 
 	return two
