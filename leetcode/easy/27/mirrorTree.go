@@ -1,6 +1,5 @@
 package _7
 
-import "sort"
 
 type TreeNode struct {
 	Val   int
@@ -16,7 +15,5 @@ func mirrorTree(root *TreeNode) *TreeNode {
 	mirrorTree(root.Left)
 	mirrorTree(root.Right)
 	return root
-
-	sort.Ints()
 
 }

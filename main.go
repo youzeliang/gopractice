@@ -69,7 +69,9 @@ func find() {
 
 func main() {
 
-	fmt.Println(111)
+	a := 1
+
+	fmt.Println(a)
 	//find()
 
 	// a := []int{1,2,3}
@@ -100,9 +102,8 @@ func main() {
 	//Multiply(10, 5, reply)
 	//fmt.Println("Multiply:", &reply) // Multiply: 50
 
-	minSteps("leetcode", "practice")
+	// minSteps("leetcode", "practice")
 }
-
 
 func testChan() {
 	var ch2 chan string
