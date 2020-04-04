@@ -1,6 +1,5 @@
 package _965_univalued_binary_tree
 
-
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

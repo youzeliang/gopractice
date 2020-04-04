@@ -16,19 +16,19 @@ func massage(nums []int) int {
 		return nums[0]
 	}
 
-	dp := make([]int,l+1)
+	dp := make([]int, l+1)
 	dp[0] = nums[0]
-	dp[1] = max(nums[0],nums[1])
+	dp[1] = max(nums[0], nums[1])
 
-	for i := 2;i < l ; i++ {
-		dp[i] = max(dp[i-1],dp[i-2]+nums[i])
+	for i := 2; i < l; i++ {
+		dp[i] = max(dp[i-1], dp[i-2]+nums[i])
 
 	}
 
 	return dp[l-1]
 }
 
-func max(a, b int ) int {
+func max(a, b int) int {
 	if a > b {
 		return a
 	}

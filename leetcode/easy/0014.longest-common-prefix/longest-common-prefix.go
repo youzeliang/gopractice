@@ -30,7 +30,16 @@ func shortest(strs []string) string {
 	return res
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+func daysBetweenDates(date1 string, date2 string) int {
+
+	a, _ := time.Parse(date1, date1)
+	println(a)
+
+}
+>>>>>>> a5e0a62349c7c711a13bf0e3c24c2a7432635906

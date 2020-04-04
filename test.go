@@ -463,3 +463,68 @@ func minTimeToVisitAllPoints(points [][]int) int {
 	}
 	return sum
 }
+
+func containsNearbyAlmostDuplicate(nums []int, k int, t int) bool {
+
+	l := len(nums)
+	for i := 0; i < l; i++ {
+		if i+k < l {
+			if abs(nums[i], nums[i+k]) == t {
+				return true
+			}
+		}
+	}
+
+	return false
+}
+
+func abs(a, b int) int {
+	if a-b > 0 {
+		return a - b
+	}
+
+	return b - a
+}
+
+func bubbleSort(arr []int) {
+	for i := 0; i < len(arr)-1; i++ {
+		flag := true
+		for j := 0; j < len(arr)-1-i; j++ {
+			if arr[j] > arr[j+1] {
+				arr[j], arr[j+1] = arr[j+1], arr[j]
+				flag = false
+			}
+		}
+		if flag {
+			break
+		}
+	}
+}
+
+func selectSort(nums []int) {
+	length := len(nums)
+	for i := 0; i < length; i++ {
+		maxIndex := 0
+		//寻找最大的一个数，保存索引值
+		for j := 1; j < length-i; j++ {
+			if nums[j] > nums[maxIndex] {
+				maxIndex = j
+			}
+		}
+		nums[length-i-1], nums[maxIndex] = nums[maxIndex], nums[length-i-1]
+	}
+}
+
+func fdsfds(nums []int) {
+	l := len(nums)
+	for i := 0; i < l; i++ {
+		maxIndex := 0
+		for j := 1; j < l-1; j++ {
+			if nums[maxIndex] < nums[j] {
+				maxIndex = j
+			}
+		}
+
+		nums[l-i-1], nums[maxIndex] = nums[maxIndex], nums[l-i-1]
+	}
+}
