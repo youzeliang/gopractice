@@ -1,27 +1,39 @@
 package main
 
 import (
-	"github.com/fvbock/endless"
-	"github.com/gin-gonic/gin"
-	"github.com/youzeliang/gopractice/conf"
-	"github.com/youzeliang/gopractice/helper"
-	"github.com/youzeliang/gopractice/router"
+	"fmt"
+	"log"
+	"os/user"
+	"time"
 )
 
-func main()  {
+func main() {
 
-	r := gin.New()
-
-
-	helper.InitMysql()
-	 router.Crontab(r)
-
-
-
-	endless.ListenAndServe(":"+conf.Conf.Port, r)
-
-
-
+	//r := gin.New()
+	//
+	//helper.InitMysql()
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//go router.Crontab(r)
+	//
+	//endless.ListenAndServe(":"+conf.Conf.Port, r)
 
 	//// 尝试与 google.com:80 建立 tcp 连接
 	//conn, err := net.Dial("tcp", "google.com:80")
@@ -43,9 +55,48 @@ func main()  {
 	//}
 	//
 	//fmt.Println(string(dat))
+
+	fmt.Println("--------")
+	t()
 }
 
+func test1() {
+	u, err := user.Current()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("--------")
+
+	fmt.Println("Home dir:", u.HomeDir)
+	fmt.Println("Home dir:", u.Gid)
+	fmt.Println("Home dir:", u.Name)
+	fmt.Println("Home dir:", u.Uid)
+	fmt.Println("Home dir:", u.Username)
+}
+
+func getCurTime() {
+	// 本地时间（如果是在中国，获取的是东八区时间）
+
+	curLocalTime := time.Now()
+	// UTC时间
+	curUTCTime := time.Now().UTC()
+	fmt.Println(curLocalTime, curUTCTime)
+
+}
+
+func t() {
+	timer1 := time.NewTimer(time.Second * 3)
+
+	go func() {
+		//等触发时的信号
+		<-timer1.C
+		fmt.Println("do the thing")
+	}()
+	//由于上面的等待信号是在新线程中，所以代码会继续往下执行，停掉计时器
+	time.Sleep(time.Second * 1)
 
 
 
 
+}
