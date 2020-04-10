@@ -134,7 +134,7 @@ func findLucky(arr []int) int {
 	return max
 }
 
-func fdsfds() {
+func fdsfdddds() {
 	arr := [5]int{1, 2, 3, 4, 5}
 	slice := arr[0:3] // 左闭右开区间，最终切片为 [1,2,3]
 	println(cap(slice))

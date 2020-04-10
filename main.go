@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"sort"
 )
@@ -52,26 +53,26 @@ func findNumbers(nums []int) int {
 
 func find() {
 
-	a := 123456789
+	type UserInfo struct {
+		Name string `json:"name"`
+		Age  int    `json:"age"`
+	}
+	u1 := UserInfo{Name: "q1mi", Age: 18}
 
-	//two := (a/10000000)%10
-
-	// four := two
-	c := (a / 100000) % 10
-
-	//for i := 100000000; i < 999999999;i++{
-	//
-	//}
-	fmt.Println(c)
-
-	fmt.Println((1 + 100) * 100 / 2)
+	b, _ := json.Marshal(&u1)
+	var m map[string]interface{}
+	_ = json.Unmarshal(b, &m)
+	for k, v := range m{
+		fmt.Printf("key:%v value:%v value type:%T\n", k, v, v)
+	}
 }
 
+
+
+
+
 func main() {
-
-	a := 1
-
-	fmt.Println(a)
+	find()
 	//find()
 
 	// a := []int{1,2,3}
