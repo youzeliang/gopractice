@@ -1,6 +1,5 @@
 package _7
 
-
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

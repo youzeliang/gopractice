@@ -21,4 +21,3 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	slow.Next = slow.Next.Next
 	return head
 }
-

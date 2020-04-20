@@ -62,14 +62,10 @@ func find() {
 	b, _ := json.Marshal(&u1)
 	var m map[string]interface{}
 	_ = json.Unmarshal(b, &m)
-	for k, v := range m{
+	for k, v := range m {
 		fmt.Printf("key:%v value:%v value type:%T\n", k, v, v)
 	}
 }
-
-
-
-
 
 func main() {
 	find()
