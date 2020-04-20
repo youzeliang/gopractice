@@ -100,7 +100,89 @@ func main() {
 
 	//smallerNumbersThanCurrent2([]int{3, 4, 5})
 	//majorityElement([]int{1, 1, 2, 3})
-	ta()
+	//ta()
+
+	//sumFourDivisors([]int{7, 9})
+	//fdsfds()
+
+	findLucky([]int{2, 2, 3, 4})
+}
+
+func findLucky(arr []int) int {
+	m := make(map[int]int)
+	for _, j := range arr {
+		if _, ok := m[j]; ok {
+			m[j] = m[j] + 1
+		} else {
+			m[j] = 1
+		}
+	}
+
+	if len(m) == 0 {
+		return -1
+	}
+
+	max := 0
+	for i, j := range m {
+		if i == j {
+			if j > max {
+				max = j
+			}
+		}
+	}
+
+	return max
+}
+
+func fdsfdddds() {
+	arr := [5]int{1, 2, 3, 4, 5}
+	slice := arr[0:3] // 左闭右开区间，最终切片为 [1,2,3]
+	println(cap(slice))
+
+	m := make(map[int]int)
+	if _, ok := m[1]; ok {
+
+	}
+}
+
+func sumFourDivisors(nums []int) int {
+	var res int
+	for i := 0; i < len(nums); i++ {
+		res += lll(nums[i])
+	}
+
+	return res
+
+}
+
+func lll(num int) int {
+
+	if num < 6 {
+		return 0
+	}
+
+	res := 0
+	sum := 0
+	n := int(math.Sqrt(float64(num)))
+
+	re := 0
+	for i := 1; i < n; i++ {
+		if n%i == 0 {
+			res++
+			sum += i
+			re = i
+		}
+		if res > 2 {
+			return 0
+		}
+	}
+
+	if res == 2 {
+		return 1 + num + re + num/re
+	}
+
+	return 0
+
 }
 
 func ta() {

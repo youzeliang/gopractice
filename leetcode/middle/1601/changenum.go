@@ -1,6 +1,5 @@
 package _601
 
-
 func swapNumbers(numbers []int) []int {
 	if len(numbers) != 2 {
 		return numbers

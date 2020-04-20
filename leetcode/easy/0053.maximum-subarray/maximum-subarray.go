@@ -18,7 +18,11 @@ func max(a, b int) int {
 	return b
 }
 
-// 解法2
+// 解法2 动态规划
+
+//dp =nums[0]   初始化
+//dp =dp+nums[i]  dp>0
+//dp = nums[i] dp<=0
 
 func maxSubArray2(nums []int) int {
 	curMaxSum := 0       // 当前最大连续子序列和

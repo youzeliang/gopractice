@@ -8,3 +8,52 @@ package _025_divisor_game
 func divisorGame(N int) bool {
 	return N%2 == 0
 }
+
+func divisorGame1(N int) bool {
+	if N == 0 {
+		return true
+	}
+
+	dp := make([]bool, N+2)
+
+	dp[0] = true
+	dp[1] = true
+
+	for i := 3; i <= N; i++ {
+		for j := 1; j < i; j++ {
+			if !dp[i-j] && i%j == 0 {
+				dp[i] = true
+				break
+			}
+		}
+	}
+
+	return dp[N]
+
+}
+
+func reverseWords(s string) string {
+	n := len(s)
+	r := []byte(s)
+	reverse(r)
+	var out []byte
+	for fast, slow := 0, 0; fast < n; fast++ {
+		if slow < n && r[slow] == ' ' {
+			slow++
+		} else if fast == n-1 || r[fast+1] == ' ' {
+			if len(out) != 0 {
+				out = append(out, ' ')
+			}
+			out = append(out, reverse(r[slow:fast+1])...) // 拼接两个[]byte可以用append的可变参数特性来实现
+			slow = fast + 1
+		}
+	}
+	return string(out)
+}
+
+func reverse(b []byte) []byte { // reverse函数有两个功能，调转b，并能返回b
+	for start, end := 0, len(b)-1; start < end; start, end = start+1, end-1 {
+		b[start], b[end] = b[end], b[start]
+	}
+	return b
+}
