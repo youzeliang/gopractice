@@ -20,17 +20,29 @@ func main() {
 	//fmt.Println(slice)
 	//c()
 
-	taskCh := make(chan int, 100)
-	go worker(taskCh)
+	//taskCh := make(chan int, 100)
+	//go worker(taskCh)
+	//
+	//// 塞任务
+	//for i := 0; i < 10; i++ {
+	//	taskCh <- i
+	//}
+	//
+	//// 等待 1 小时
+	//select {
+	//case <-time.After(time.Second):
+	//}
 
-	// 塞任务
-	for i := 0; i < 10; i++ {
-		taskCh <- i
-	}
+	tfdsfs()
+	time.Sleep(time.Second)
+}
 
-	// 等待 1 小时
-	select {
-	case <-time.After(time.Second):
+func tfdsfs()  {
+
+	for i := 0;i < 5;i++{
+		go func() {
+			fmt.Println(321312)
+		}()
 	}
 }
 
