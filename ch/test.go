@@ -33,7 +33,29 @@ func main() {
 	//case <-time.After(time.Second):
 	//}
 
-	tfdsfs()
+	//tfdsfs()
+	//time.Sleep(time.Second)
+
+	lock()
+}
+
+func lock()  {
+	//var mutex sync.Mutex
+	fmt.Println("begin lock")
+	//mutex.Lock()
+	fmt.Println("get locked")
+	for i := 1; i <= 3; i++ {
+		go func(i int) {
+			fmt.Println("begin lock ", i)
+			//mutex.Lock()
+			//fmt.Println("get locked ", i)
+		}(i)
+	}
+
+	time.Sleep(time.Second)
+	fmt.Println("Unlock the lock")
+	//mutex.Unlock()
+	fmt.Println("get unlocked")
 	time.Sleep(time.Second)
 }
 
