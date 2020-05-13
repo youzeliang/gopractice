@@ -14,6 +14,7 @@ func doSomething(id int, wg *sync.WaitGroup) {
 	log.Printf("after do job:(%d) \n", id)
 	// fd
 	// 1
+	// 2
 }
 
 func main() {
