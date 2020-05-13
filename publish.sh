@@ -5,3 +5,4 @@ git add * && git commit -a  -m  'publish book' && git push origin master
 
 
 # test3
+# find ./path -type f -name "file_name"
