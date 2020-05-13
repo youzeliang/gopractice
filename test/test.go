@@ -13,6 +13,7 @@ func doSomething(id int, wg *sync.WaitGroup) {
 	time.Sleep(3 * time.Second)
 	log.Printf("after do job:(%d) \n", id)
 	// fd
+	// 1
 }
 
 func main() {
