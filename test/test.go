@@ -27,6 +27,6 @@ func main() {
 
 	wg.Wait()
 
-	 wg.Done()
+	wg.Done()
 	log.Printf("finish all jobs\n")
 }

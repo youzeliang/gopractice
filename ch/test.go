@@ -39,7 +39,7 @@ func main() {
 	lock()
 }
 
-func lock()  {
+func lock() {
 	//var mutex sync.Mutex
 	fmt.Println("begin lock")
 	//mutex.Lock()
@@ -59,16 +59,16 @@ func lock()  {
 	time.Sleep(time.Second)
 }
 
-func tfdsfs()  {
+func tfdsfs() {
 
-	for i := 0;i < 5;i++{
+	for i := 0; i < 5; i++ {
 		go func() {
 			fmt.Println(321312)
 		}()
 	}
 }
 
-func closeChannel()  {
+func closeChannel() {
 	ch := make(chan int, 5)
 	ch <- 18
 	close(ch)
@@ -82,8 +82,6 @@ func closeChannel()  {
 		fmt.Println("channel closed, data invalid.")
 	}
 }
-
-
 
 func worker(taskCh <-chan int) {
 	const N = 5
