@@ -41,3 +41,5 @@ func main() {
 
 	panic("unknown err")
 }
+	//wg.Done()
+	//log.Printf("finish all jobs\n")

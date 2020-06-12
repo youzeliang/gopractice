@@ -36,7 +36,6 @@ func isPalindrome(head *ListNode) bool { // 使用快慢指针寻找链表中点
 	return true
 }
 
-
 // 解题2，取出链表中的数
 
 func isPalindrome2(head *ListNode) bool {

@@ -7,6 +7,6 @@ import (
 
 func TestHammingWeight(t *testing.T) {
 
-	a := 5&4
+	a := 5 & 4
 	fmt.Println(a)
 }
