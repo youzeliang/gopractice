@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"sync"
 	"time"
@@ -18,15 +19,27 @@ func doSomething(id int, wg *sync.WaitGroup) {
 }
 
 func main() {
-	var wg sync.WaitGroup
-	wg.Add(3)
+	//var wg sync.WaitGroup
+	//wg.Add(3)
+	//
+	//go doSomething(1, &wg)
+	//go doSomething(2, &wg)
+	//go doSomething(3, &wg)
+	//
+	//wg.Wait()
+	//
+	// wg.Done()
+	//log.Printf("finish all jobs\n")
 
-	go doSomething(1, &wg)
-	go doSomething(2, &wg)
-	go doSomething(3, &wg)
 
-	wg.Wait()
 
-	wg.Done()
-	log.Printf("finish all jobs\n")
+
+	defer fmt.Println("in main")
+	if err := recover(); err != nil {
+		fmt.Println(err)
+	}
+
+	panic("unknown err")
 }
+	//wg.Done()
+	//log.Printf("finish all jobs\n")
