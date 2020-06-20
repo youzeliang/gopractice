@@ -105,8 +105,13 @@ func main() {
 	//sumFourDivisors([]int{7, 9})
 	//fdsfds()
 
-	findLucky([]int{2, 2, 3, 4})
+	//findLucky([]int{2, 2, 3, 4})
+
+	fmt.Println(-1<<63)
+
+	fmt.Println(math.MaxUint64)
 }
+
 
 func findLucky(arr []int) int {
 	m := make(map[int]int)
