@@ -6,6 +6,8 @@ import (
 	"math"
 	"sort"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 type User struct {
@@ -107,11 +109,20 @@ func main() {
 
 	//findLucky([]int{2, 2, 3, 4})
 
-	fmt.Println(-1<<63)
-
-	fmt.Println(math.MaxUint64)
 }
 
+func ginInfo() {
+
+	gin.Default()
+	//r := gin.Default()
+	//r.GET("/ping", func(c *gin.Context) {
+	//	c.JSON(200, gin.H{
+	//		"message": "pong",
+	//	})
+	//})
+	//r.Run() // 监听并在 0.0.0.0:8080 上启动服务
+
+}
 
 func findLucky(arr []int) int {
 	m := make(map[int]int)
