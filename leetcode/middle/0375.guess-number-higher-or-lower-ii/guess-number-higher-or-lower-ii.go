@@ -8,7 +8,6 @@ func getMoneyAmount(n int) int {
 		dp[i] = make([]int, n+1)
 	}
 
-
 	for j := 2; j <= n; j++ {
 		for i := j - 1; 0 < i; i-- {
 			// 为了确保可以猜出 i<=x<=j 中的 x

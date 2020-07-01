@@ -1,9 +1,8 @@
 package main
 
-
 import "fmt"
 
-func main()  {
+func main() {
 	//fmt.Println("f1 result: ", f1())
 	fmt.Println("f2 result: ", f2())
 }

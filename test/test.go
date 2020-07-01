@@ -31,9 +31,6 @@ func main() {
 	// wg.Done()
 	//log.Printf("finish all jobs\n")
 
-
-
-
 	defer fmt.Println("in main")
 	if err := recover(); err != nil {
 		fmt.Println(err)
@@ -41,5 +38,6 @@ func main() {
 
 	panic("unknown err")
 }
-	//wg.Done()
-	//log.Printf("finish all jobs\n")
+
+//wg.Done()
+//log.Printf("finish all jobs\n")
