@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+)
 
 func main() {
-	fmt.Println(1111)
+	a := Float64bits(11.1)
+	fmt.Println(a)
+}
+
+func Float64bits(f float64) uint64 {
+	return *(*uint64)(unsafe.Pointer(&f))
 }
