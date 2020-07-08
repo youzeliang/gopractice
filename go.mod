@@ -10,7 +10,6 @@ require (
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/nsqio/go-nsq v1.0.8
 	github.com/opentracing/opentracing-go v1.1.0
-	github.com/robfig/cron v1.2.0
 	github.com/sirupsen/logrus v1.4.2
 	github.com/sony/sonyflake v1.0.0
 	golang.org/x/net v0.0.0-20200625001655-4c5254603344 // indirect
