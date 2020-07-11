@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-
 var MysqlClient *gorm.DB
 
 func InitMysql() {

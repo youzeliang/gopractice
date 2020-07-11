@@ -33,15 +33,13 @@ func main() {
 
 }
 
-
 var apr = struct {
 	Name string
 	Age  int
 }{
 	Name: "zhanglinpeng",
-	Age: 13,
+	Age:  13,
 }
-
 
 var a = struct {
 	Name string

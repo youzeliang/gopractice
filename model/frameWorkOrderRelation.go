@@ -59,7 +59,7 @@ func QueryRepeatWaveIDList(warehouseID string, c *gin.Context) (frameWorkOrderLi
 		Where(" warehouse_id = ? and  status = ? ", warehouseID, Valid).
 		Find(&frameWorkOrderList).Error
 	if dbErr != nil {
-		return frameWorkOrderList,err
+		return frameWorkOrderList, err
 	}
 
 	return frameWorkOrderList, nil

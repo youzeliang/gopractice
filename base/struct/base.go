@@ -5,7 +5,7 @@ import (
 )
 
 type User struct {
-	Name string
+	Name  string
 	Email string
 }
 
@@ -29,11 +29,11 @@ type Admin struct {
 
 func main() {
 	user := User{
-		Name: "jane",
+		Name:  "jane",
 		Email: "jane@email.com",
 	}
 	admin := &Admin{
-		User: user,
+		User:  user,
 		Level: "super",
 	}
 	_ = SendNotification(admin) //User: Sending User Email To jane<jane@email.com>

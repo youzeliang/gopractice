@@ -189,4 +189,3 @@ func StackLogger(ctx *gin.Context, err error) {
 
 	fmt.Printf("%s\n-------------------stack-start-------------------\n%+v\n-------------------stack-end-------------------\n", string(info), err)
 }
-
