@@ -12,8 +12,8 @@ var producer *nsq.Producer
 
 // 主函数
 func main() {
-	strIP1 := "127.0.0.1:4150"
-	strIP2 := "127.0.0.1:4152"
+	strIP1 := "111.229.144.41:4160"
+	strIP2 := "111.229.144.41:4161"
 	InitProducer(strIP1)
 
 	running := true
