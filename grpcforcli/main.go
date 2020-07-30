@@ -26,7 +26,7 @@ func main() {
 		name = os.Args[1]
 	}
 
-	//设置上下文超时
+	//设置上下文超时de
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
