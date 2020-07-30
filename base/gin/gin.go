@@ -23,13 +23,9 @@ func (a *aa) F1(ctx context.Context) bool {
 	return true
 }
 
-
 type bb struct {
 }
-
 
 func (b *bb) F1(ctx context.Context) bool {
 	return true
 }
-
-

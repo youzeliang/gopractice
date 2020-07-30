@@ -38,8 +38,7 @@ func StructToMap(obj interface{}) map[string]interface{} {
 	return data
 }
 
-
-func GetGreeting (name string) (greeting string) {
+func GetGreeting(name string) (greeting string) {
 	greeting = "Hello " + name + "."
 	return
 }

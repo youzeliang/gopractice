@@ -11,7 +11,7 @@ func say(s string) {
 		fmt.Println(s, (i+1)*100)
 	}
 }
-func say2(s string,ch chan int) {
+func say2(s string, ch chan int) {
 	for i := 0; i < 5; i++ {
 		time.Sleep(150 * time.Millisecond)
 		fmt.Println(s, (i+1)*150)
@@ -23,7 +23,7 @@ func say2(s string,ch chan int) {
 func main() {
 
 	c := make(chan int)
-	go say2("world",c)
+	go say2("world", c)
 	say("hello------------------")
 	fmt.Println(<-c)
 }

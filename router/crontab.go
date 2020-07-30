@@ -11,14 +11,11 @@ func Crontab(g *gin.Engine) {
 	InitCrontab(g)
 }
 
-func InitCrontab(g *gin.Engine) () {
+func InitCrontab(g *gin.Engine) {
 	//c := cron.New()
 	//c.AddFunc("@every 1ms", service.Test)
 	//c.Start()
 	loopWorker()
-	
-
-
 
 }
 

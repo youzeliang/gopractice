@@ -86,6 +86,6 @@ func (s *Stack) Pop() *TreeNode {
 	return n
 }
 
-func init()  {
+func init() {
 	fmt.Println("for some test")
 }

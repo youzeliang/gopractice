@@ -18,7 +18,7 @@ type service struct {
 func (s *service) HelloWorld(ctx context.Context, in *example.HelloRequest) (*example.HelloReply, error) {
 	log.Printf("Received: %v", in.Name)
 	times++
-	return &example.HelloReply{Message: "Hello 您好！" + in.Name+" 您是今天第"+strconv.Itoa(times)+"个访客"}, nil
+	return &example.HelloReply{Message: "Hello 您好！" + in.Name + " 您是今天第" + strconv.Itoa(times) + "个访客"}, nil
 }
 
 func main() {
@@ -26,7 +26,6 @@ func main() {
 	fmt.Println(conn, err)
 
 	server := grpc.NewServer()
-
 
 	example.RegisterHelloServer(server, &service{})
 	//读取请求并响应

@@ -1,5 +1,0 @@
-package test
-
-func Tf() {
-
-}
