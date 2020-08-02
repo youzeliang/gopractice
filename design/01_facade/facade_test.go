@@ -15,9 +15,8 @@ func TestFacadeAPI(t *testing.T) {
 	var n []string
 	n = append(n, "fd")
 
-	var z  = []string{"3432","432"}
+	var z = []string{"3432", "432"}
 
-	var zzz = [][]string{{"fds","fd","fds"}}
-
+	var zzz = [][]string{{"fds", "fd", "fds"}}
 
 }

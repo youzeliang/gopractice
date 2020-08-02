@@ -17,21 +17,19 @@ func main() {
 
 }
 
-func producer(header string, channel chan <- string)  {
+func producer(header string, channel chan<- string) {
 
-	for  {
+	for {
 		// 将随机数和字符串格式化为字符串发送给通道
 		channel <- fmt.Sprintf("%s: %v", header, rand.Int31())
-		time.Sleep(time.Second*2)
+		time.Sleep(time.Second * 2)
 	}
 }
 
-func customer(channel <- chan string)  {
+func customer(channel <-chan string) {
 
 	for {
 		message := <-channel
 		fmt.Println(message)
 	}
 }
-
-
