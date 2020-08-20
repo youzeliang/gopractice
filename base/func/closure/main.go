@@ -4,7 +4,20 @@ import "fmt"
 
 func main() {
 
-	te()
+	//te()
+	c := a()
+	c()
+}
+
+func a() func() int  {
+	i := 0
+	c := func  ()int{
+		i++
+		fmt.Println(i)
+		return i
+	}
+
+	return c
 }
 
 func te() {
@@ -40,3 +53,5 @@ func sim(func(a,b int)) func(c, d int) int {
 		return a + b
 	}
 }
+
+
