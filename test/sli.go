@@ -1,6 +1,8 @@
 package main
 
-import "container/heap"
+import (
+	"container/heap"
+)
 
 func smallestK(arr []int, k int) []int {
 	intHeap := make(IntHeap, 0, len(arr))
@@ -24,6 +26,11 @@ type IntHeap []int
 
 func (h IntHeap) Len() int {
 	return len(h)
+}
+
+func main() {
+	//fmt.Println("f1 result: ", f1())
+	//fmt.Println("f2 result: ", f2())
 }
 
 func (h IntHeap) Less(i int, j int) bool {
