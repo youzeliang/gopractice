@@ -1,40 +1,47 @@
 package main
 
+import "container/heap"
 
-import "fmt"
+func smallestK(arr []int, k int) []int {
+	intHeap := make(IntHeap, 0, len(arr))
+	heap.Init(&intHeap)
+	for i := 0; i < len(arr); i++ {
+		heap.Push(&intHeap, arr[i])
+		if len(intHeap) > k {
+			heap.Pop(&intHeap)
+		}
+	}
 
-func main()  {
-	//fmt.Println("f1 result: ", f1())
-	fmt.Println("f2 result: ", f2())
+	result := make([]int, 0, k)
+	for i := 0; i < k; i++ {
+		result = append(result, (heap.Pop(&intHeap)).(int))
+	}
+
+	return result
 }
 
-func f1() int {
-	var i int
-	defer func() {
-		i++
-		fmt.Println("f11: ", i)
-	}()
+type IntHeap []int
 
-	defer func() {
-		i++
-		fmt.Println("f12: ", i)
-	}()
-
-	i = 1000
-	return i
+func (h IntHeap) Len() int {
+	return len(h)
 }
 
-func f2() (i int) {
-	defer func() {
-		i++
-		fmt.Println("f21: ", i)
-	}()
+func (h IntHeap) Less(i int, j int) bool {
+	return h[i] > h[j]
+}
 
-	defer func() {
-		i++
-		fmt.Println("f22: ", i)
-	}()
+func (h IntHeap) Swap(i int, j int) {
+	h[i], h[j] = h[j], h[i]
+}
 
-	i = 1000
-	return i
+func (h *IntHeap) Push(x interface{}) {
+	*h = append(*h, x.(int))
+}
+
+func (h *IntHeap) Pop() interface{} {
+	length := len(*h)
+	val := (*h)[length-1]
+	*h = (*h)[:length-1]
+
+	return val
 }
