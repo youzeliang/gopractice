@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	pb "github.com/youzeliang/gopractice/grpcfor/example"
 	"google.golang.org/grpc"
 	"log"
@@ -26,14 +27,16 @@ func main() {
 		name = os.Args[1]
 	}
 
-	//设置上下文超时
+	//设置上下文超时de
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
 	//响应
 	resp, err := cli.HelloWorld(ctx, &pb.HelloRequest{Name: name})
 	if err != nil {
+		fmt.Println(err)
 		log.Fatalf("could not succ: %v", err)
 	}
+	fmt.Println("sussess")
 	log.Printf("Receive from server: %s", resp.Message)
 }

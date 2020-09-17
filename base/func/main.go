@@ -1,15 +1,49 @@
 package main
 
 import "fmt"
+import (
+	_ "github.com/youzeliang/gopractice/base/func/init"
+)
+
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+func inc() func() int {
+	var a int = 1
+	return func() int {
+		a++
+		return a
+	}
+}
 
 func main() {
+	//pos, neg := adder(), adder()
+	//for i := 0; i < 10; i++ {
+	//	fmt.Println(
+	//		pos(i),
+	//		neg(-2*i),
+	//	)
+	//}
 
-	// 匿名函数
-	c := func(a, b int) int {
-		fmt.Println(a, b)
-		return a + b
-	}(1, 2)
+	//m := inc()
 
-	fmt.Println(c)
+	//fmt.Println(inc()())
+	//fmt.Println(inc()())
+	//fmt.Println(inc()())
 
+	x := 1
+	f := func() {
+		fmt.Println(x)
+	}
+
+	x = 2
+	x = 3
+	f() // 3
+
+	x = 4
 }
