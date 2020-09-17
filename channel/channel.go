@@ -1,10 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 
-	t1()
+	stop := make(chan bool)
+
+	go func() {
+		for {
+			select {
+			case <-stop:
+				fmt.Println("break")
+				return
+			default:
+				fmt.Println("watch ing")
+				time.Sleep(1 * time.Second)
+			}
+		}
+	}()
+
+	time.Sleep(5 * time.Second)
+	fmt.Println("stop")
+	stop <- true
+	fmt.Println(5 * time.Second)
+
 }
 
 func t2() {
