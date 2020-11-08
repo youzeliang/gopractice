@@ -14,6 +14,7 @@ func NewF(name string) *F {
 }
 
 func main() {
+
 	fmt.Println(1111)
 	a := Float64bits(11.1)
 	fmt.Println(a)
