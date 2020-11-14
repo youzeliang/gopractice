@@ -2,7 +2,7 @@ package init
 
 import "fmt"
 
-func init()  {
+func init() {
 	fmt.Println(11111)
 }
 

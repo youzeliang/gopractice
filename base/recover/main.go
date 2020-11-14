@@ -17,4 +17,3 @@ func tes() {
 
 	panic("fdfsd")
 }
-

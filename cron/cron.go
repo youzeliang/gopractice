@@ -20,12 +20,10 @@ func main() {
 	//a := str2runes("fafa")
 	//fmt.Println(a)
 
-
 	cc()
 }
 
 func cc() {
-
 
 }
 

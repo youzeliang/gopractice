@@ -21,8 +21,6 @@ func tes1() {
 		ch <- i
 	}
 
-
 	fmt.Println(ch)
-
 
 }

@@ -58,4 +58,3 @@ func f5() {
 	fmt.Println(time.Now())
 	fmt.Println(<-timer5.C)
 }
-

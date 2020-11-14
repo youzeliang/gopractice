@@ -6,8 +6,6 @@ const MAX int = 3
 
 func main() {
 
-
-
 	/* nextNumber 为一个函数，函数 i 为 0 */
 	//nextNumber := getSequence()
 	//
@@ -63,6 +61,3 @@ func n() {
 		fmt.Println("Welcome", n)
 	}("fdsfds")
 }
-
-
-

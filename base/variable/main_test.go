@@ -19,7 +19,7 @@ func traversalString() {
 	//	fmt.Printf("%v(%c) ", s[i], s[i])
 	//}
 	fmt.Println()
-	for _, r := range s 	{ //rune
+	for _, r := range s { //rune
 
 		_ = r
 		//fmt.Printf("%v(%c) ", r, r)

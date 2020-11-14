@@ -36,6 +36,6 @@ func BenchmarkSlice(b *testing.B) {
 
 }
 
-func ExampleBff()  {
+func ExampleBff() {
 
 }
