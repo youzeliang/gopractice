@@ -1,18 +1,15 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 
 	ch := make(chan int)
 	go rev(ch)
-	ch <-10
+	ch <- 10
 }
 
-func rev(c chan int)  {
-	res := <- c
+func rev(c chan int) {
+	res := <-c
 	fmt.Println(res)
 }
-

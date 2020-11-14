@@ -8,7 +8,7 @@ func main() {
 	ch2 := make(chan int)
 	// 开启goroutine将0~100的数发送到ch1中
 	go func() {
-		for i := 0; i < 100; i++ {
+		for i := 0; i < 10; i++ {
 			ch1 <- i
 		}
 		close(ch1)
@@ -20,7 +20,7 @@ func main() {
 			if !ok {
 				break
 			}
-			ch2 <- i
+			ch2 <- i * i
 		}
 		close(ch2)
 	}()

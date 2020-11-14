@@ -5,13 +5,13 @@ import (
 	"math/rand"
 )
 
+// 计算一个数字的各个位数之和，例如数字123，结果为1+2+3=6
 type Job struct {
 	// id
 	Id int
 	// 需要计算的随机数
 	RandNum int
 }
-
 type Result struct {
 	// 这里必须传对象实例
 	job *Job
