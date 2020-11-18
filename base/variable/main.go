@@ -8,9 +8,8 @@ const (
 	c
 	d
 	e
-	f                      //3,4
+	f //3,4
 )
-
 
 func main() {
 

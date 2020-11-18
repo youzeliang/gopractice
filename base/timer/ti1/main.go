@@ -51,7 +51,7 @@ func f4() {
 	}
 }
 
-func f5()  {
+func f5() {
 	//// 5.重置定时器
 	timer5 := time.NewTimer(3 * time.Second)
 	timer5.Reset(1 * time.Second)

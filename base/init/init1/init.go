@@ -2,6 +2,6 @@ package init1
 
 import "fmt"
 
-func init()  {
+func init() {
 	fmt.Println(1111)
 }

@@ -9,9 +9,9 @@ func main() {
 	c()
 }
 
-func a() func() int  {
+func a() func() int {
 	i := 0
-	c := func  ()int{
+	c := func() int {
 		i++
 		fmt.Println(i)
 		return i
@@ -38,20 +38,18 @@ func te() {
 
 type add func(a int, b int) int
 
-func callsim()  {
+func callsim() {
 
 	s := sim(func(a, b int) {
-		a  = 1
+		a = 1
 		b = 2
 	})
-	s(1,2)
+	s(1, 2)
 }
 
-func sim(func(a,b int)) func(c, d int) int {
+func sim(func(a, b int)) func(c, d int) int {
 
 	return func(a, b int) int {
 		return a + b
 	}
 }
-
-

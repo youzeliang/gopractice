@@ -20,7 +20,6 @@ func main() {
 
 	fmt.Println(res)
 
-
-	fmt.Println(2^0)
+	fmt.Println(2 ^ 0)
 
 }

@@ -5,7 +5,6 @@ import (
 	"math/rand"
 )
 
-// 计算一个数字的各个位数之和，例如数字123，结果为1+2+3=6
 type Job struct {
 	// id
 	Id int
@@ -26,7 +25,7 @@ func main() {
 	// 2.结果管道
 	resultChan := make(chan *Result, 128)
 	// 3.创建工作池
-	createPool(10000, jobChan, resultChan)
+	createPool(1, jobChan, resultChan)
 	// 4.开个打印的协程
 	go func(resultChan chan *Result) {
 		// 遍历结果管道打印
