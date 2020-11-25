@@ -2,25 +2,25 @@ package main
 
 import (
 	"fmt"
-	"unsafe"
+	"sync"
 )
 
-type F struct {
-	Name string
-}
+var x int64
+var wg sync.WaitGroup
+var lock sync.Mutex
 
-func NewF(name string) *F {
-	return &F{Name: name}
+func add() {
+	for i := 0; i < 5000; i++ {
+		lock.Lock() // 加锁
+		x = x + 1
+		lock.Unlock() // 解锁
+	}
+	wg.Done()
 }
-
 func main() {
-
-	fmt.Println(1111)
-	a := Float64bits(11.1)
-
-	fmt.Println(a)
-}
-
-func Float64bits(f float64) uint64 {
-	return *(*uint64)(unsafe.Pointer(&f))
+	wg.Add(2)
+	go add()
+	go add()
+	wg.Wait()
+	fmt.Println(x)
 }
