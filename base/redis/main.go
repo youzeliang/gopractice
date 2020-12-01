@@ -10,7 +10,7 @@ var RedisClient *redis.Client
 
 func InitRedis() {
 	RedisClient = redis.NewClient(&redis.Options{
-		Addr:         "10.170.124.79:6379", // conf.Conf.Redis.Addr,
+		Addr:         "127.0.0.1:6379", // conf.Conf.Redis.Addr,
 		DialTimeout:  10 * time.Second,
 		ReadTimeout:  30 * time.Second,
 		WriteTimeout: 30 * time.Second,
