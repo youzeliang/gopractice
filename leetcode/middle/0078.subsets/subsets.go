@@ -1,4 +1,4 @@
-package _078_subsets
+package main
 
 func subsets(nums []int) [][]int {
 	res := make([][]int, 1, 1024)
