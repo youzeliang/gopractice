@@ -23,8 +23,7 @@ func main() {
 
 func worker(wg *sync.WaitGroup) {
 	defer wg.Done()
-
-	for i := 0; i < 1; i++ {
+	for i := 0; i < 10; i++ {
 		total.Lock()
 		total.value += i
 		total.Unlock()
