@@ -17,7 +17,7 @@ func main() {
 	go Consumer(ch)
 
 	sig := make(chan os.Signal, 1)
-	signal.Notify(sig,syscall.SIGINT,syscall.SIGTERM)
+	signal.Notify(sig, syscall.SIGINT, syscall.SIGTERM)
 
 }
 

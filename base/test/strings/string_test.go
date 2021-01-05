@@ -57,14 +57,13 @@ func BenchmarkSplit(b *testing.B) {
 }
 
 func BenchmarkSplitParallel(b *testing.B) {
-	 b.SetParallelism(1) // 设置使用的CPU数
+	b.SetParallelism(1) // 设置使用的CPU数
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
 			Split("枯藤老树昏鸦", "老")
 		}
 	})
 }
-
 
 func ExampleSplit() {
 	fmt.Println(Split("a:b:c", ":"))

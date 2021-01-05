@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func worker(done chan bool){
+func worker(done chan bool) {
 	fmt.Println("start working...")
 	done <- true
 	fmt.Println("end working...")
@@ -13,5 +13,6 @@ func main() {
 
 	go worker(done)
 
-	_ :<- done
+_:
+	<-done
 }

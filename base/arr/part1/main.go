@@ -12,15 +12,14 @@ func main() {
 
 	fmt.Println(arr)
 
-
-	var a = [5]int{1,3,2}
+	var a = [5]int{1, 3, 2}
 
 	for i, i2 := range a {
-		
+
 	}
-	
+
 	//var a []int
 
-	a = append(a, )
+	a = append(a)
 
 }
