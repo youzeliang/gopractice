@@ -25,7 +25,7 @@ type TreeNode struct {
 }
 
 // 递归法
-func inorderTraversal(root *TreeNode) []int {
+func inorderTraversal1(root *TreeNode) []int {
 
 	return inorderRecursive(root)
 

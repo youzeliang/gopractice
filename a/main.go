@@ -1,7 +1,31 @@
 package main
 
-func main() {
+import (
+	"encoding/json"
+	"fmt"
+)
 
+func main() {
+	ff()
+}
+
+type person struct {
+	Name string
+	Age  int
+}
+
+func ff() {
+	p := person{Name: "我", Age: 20}
+	//struct to json
+	jsonB, err := json.Marshal(p)
+	print(jsonB)
+	if err == nil {
+		fmt.Println(string(jsonB))
+	}
+	//json to struct
+	respJSON := "{\"Name\":\"李四\",\"Age\":40}"
+	json.Unmarshal([]byte(respJSON), &p)
+	fmt.Println(p)
 }
 
 func nthUglyNumber(n int) int {
