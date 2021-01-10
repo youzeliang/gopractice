@@ -87,5 +87,5 @@ func (s *Stack) Pop() *TreeNode {
 }
 
 func init() {
-	fmt.Println("for some test")
+	fmt.Println("for some test11111")
 }
