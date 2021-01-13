@@ -25,4 +25,15 @@ func Ts() {
 
 	//m := make(map[string]string, 0)
 
+	var apr = struct {
+		Name string
+		Age int
+	}{
+		Name: "fdsfds",
+		Age: 10,
+	}
+
+
+	fmt.Println(apr)
+
 }
