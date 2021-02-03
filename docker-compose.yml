@@ -18,9 +18,31 @@ services:
       - ./sql/init1.sql:/docker-entrypoint-initdb.d/init1.sql
     restart: always
 
-#  redis:
-#    image: redis:4-alpine
-#    ports:
-#      - 6379:6379
-#    environment:
-#      - TZ=Asia/Shanghai
+  redis:
+    image: redis:4-alpine
+    ports:
+      - 6379:6379
+    environment:
+      - TZ=Asia/Shanghai
+
+  nsqlookupd:
+    image: nsqio/nsq
+    command: /nsqlookupd
+    ports:
+      - "4160"
+      - "4161"
+  nsqd:
+    image: nsqio/nsq
+    command: /nsqd --lookupd-tcp-address=nsqlookupd:4160
+    depends_on:
+      - nsqlookupd
+    ports:
+      - "4150"
+      - "4151"
+  nsqadmin:
+    image: nsqio/nsq
+    command: /nsqadmin --lookupd-http-address=nsqlookupd:4161
+    depends_on:
+      - nsqlookupd
+    ports:
+      - "4171"
