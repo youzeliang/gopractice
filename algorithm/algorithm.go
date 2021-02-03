@@ -25,7 +25,7 @@ type TreeNode struct {
 }
 
 // 递归法
-func inorderTraversal(root *TreeNode) []int {
+func inorderTraversal1(root *TreeNode) []int {
 
 	return inorderRecursive(root)
 
@@ -87,5 +87,5 @@ func (s *Stack) Pop() *TreeNode {
 }
 
 func init() {
-	fmt.Println("for some test")
+	fmt.Println("for some test11111")
 }

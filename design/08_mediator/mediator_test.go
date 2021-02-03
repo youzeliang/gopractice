@@ -1,6 +1,8 @@
 package mediator
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestMediator(t *testing.T) {
 	mediator := GetMediatorInstance()

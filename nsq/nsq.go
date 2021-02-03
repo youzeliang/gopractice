@@ -13,12 +13,10 @@ var producer *nsq.Producer
 // 主函数
 func main() {
 	strIP1 := "111.229.144.41:4160"
-	strIP2:= "111.229.144.41:4161"
+	strIP2 := "111.229.144.41:4161"
 	InitProducer(strIP1)
 
 	running := true
-
-
 
 	//读取控制台输入
 	reader := bufio.NewReader(os.Stdin)
