@@ -19,10 +19,10 @@ type Ag struct {
 type tooMuchPadding struct {
 	b   bool
 	i8  int8
-	ptr *string
 	i16 int16
 	i32 int32
 	i64 int64
+	ptr *string
 
 }
 
