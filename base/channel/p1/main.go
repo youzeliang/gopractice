@@ -30,3 +30,13 @@ func main() {
 	return
 	fmt.Println("Done")
 }
+
+func sqrt(x int) int {
+
+	var a int = x
+
+	for a*a > x {
+		a = (a + x/a) / 2
+	}
+	return a
+}
