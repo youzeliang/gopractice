@@ -2,7 +2,7 @@ package main
 
 func main() {
 
-	var a = []int{8,1,2,2,3}
+	var a = []int{8, 1, 2, 2, 3}
 	smallerNumbersThanCurrent(a)
 
 }

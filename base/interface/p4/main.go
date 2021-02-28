@@ -3,7 +3,6 @@ package main
 import "io"
 
 type myWriter struct {
-
 }
 
 func (m myWriter) Write(p []byte) (n int, err error) {

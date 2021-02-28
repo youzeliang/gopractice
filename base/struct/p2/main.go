@@ -23,7 +23,6 @@ type tooMuchPadding struct {
 	i32 int32
 	i64 int64
 	ptr *string
-
 }
 
 // tooMuchPadding optimized

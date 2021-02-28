@@ -14,7 +14,6 @@ func main() {
 	keepalloc2()
 }
 
-
 var cache = map[interface{}]interface{}{}
 
 func keepalloc() {
@@ -23,7 +22,6 @@ func keepalloc() {
 		cache[i] = m
 	}
 }
-
 
 func keepalloc2() {
 	for i := 0; i < 100000; i++ {

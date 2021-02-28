@@ -44,12 +44,12 @@ func numJewelsInStones(J string, S string) int {
 	return res
 }
 
-func kLengthApart(nums []int, k int  )  bool {
+func kLengthApart(nums []int, k int) bool {
 
 	l := len(nums)
 	target := k
 
-	for i := 0; i <l ; i++ {
+	for i := 0; i < l; i++ {
 		if nums[i] == 1 {
 			if i <= target {
 				return false

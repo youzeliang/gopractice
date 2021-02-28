@@ -27,6 +27,4 @@ func c(nums []int) bool {
 	return nums[0]*nums[3] == nums[1]*nums[2]
 }
 
-
 // 输入：nums = [2,3,4,6,8,12]
-

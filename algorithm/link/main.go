@@ -17,7 +17,7 @@ func get(head *ListNode, k int) *ListNode {
 	}
 
 	for former != nil {
-		former, latter = former.Next,latter.Next
+		former, latter = former.Next, latter.Next
 	}
 
 	return latter

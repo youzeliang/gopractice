@@ -46,5 +46,3 @@ func shortest(str []string) string {
 
 	return start
 }
-
-

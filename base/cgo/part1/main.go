@@ -7,7 +7,7 @@ import (
 func main() {
 	//C.puts(C.CString("hello\n"))
 
-	var ints []int = make([]int,0,5)
+	var ints []int = make([]int, 0, 5)
 	ints = append(ints, 1)
 
 	fmt.Println(ints)
@@ -19,8 +19,8 @@ func main() {
 type a struct {
 	c int64
 
-	b int
-	cc int64
+	b   int
+	cc  int64
 	aaa string
-	d bool
+	d   bool
 }
