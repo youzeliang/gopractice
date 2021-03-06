@@ -182,7 +182,7 @@ func StackLogger(ctx *gin.Context, err error) {
 
 	var info []byte
 	if ctx != nil {
-		//info, _ = json.Marshal(map[string]interface{}{"time": time.Now().Format("2006-01-02 15:04:05"), "level": "error", "module": "errorstack", "requestId": GetRequestId(ctx)})
+		//info, _ = json.Marshal(map[string]interview{}{"time": time.Now().Format("2006-01-02 15:04:05"), "level": "error", "module": "errorstack", "requestId": GetRequestId(ctx)})
 	} else {
 		info, _ = json.Marshal(map[string]interface{}{"time": time.Now().Format("2006-01-02 15:04:05"), "level": "error", "module": "errorstack"})
 	}
