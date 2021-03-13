@@ -25,6 +25,20 @@ func main() {
 
 }
 
+func consecutiveNumbersSum(N int) int {
+
+	var res  = 1
+	var sum = 1
+	for i := 2;sum<=n;i++{
+		sum += i
+		if (N-sum) % i == 0 {
+			res++
+		}
+	}
+
+	return res
+}
+
 func intersect(nums []int  )  {
 
 	s1 := "hello"
