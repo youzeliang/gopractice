@@ -15,7 +15,14 @@ func main() {
 	//numJewelsInStones("Add","Addccc")
 
 
-	intersect(nil)
+	//intersect(nil)
+
+	arr := []int{1, 2, 3}
+	for _, v := range arr {
+		arr = append(arr, v)
+	}
+	fmt.Println(arr)
+
 }
 
 func intersect(nums []int  )  {
