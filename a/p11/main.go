@@ -7,6 +7,7 @@ import (
 )
 
 var m = sync.Map{}
+
 func main() {
 	wg := sync.WaitGroup{}
 	for i := 0; i < 20; i++ {

@@ -10,7 +10,7 @@ func main() {
 
 	c := make(chan int)
 	go func() {
-		time.Sleep(time.Second*1)
+		time.Sleep(time.Second * 1)
 		c <- 10
 		close(c)
 	}()
@@ -19,7 +19,7 @@ func main() {
 		select {
 		case x, ok := <-c:
 			fmt.Println(x, ok)
-		time.Sleep(time.Second*3)
+			time.Sleep(time.Second * 3)
 		default:
 			fmt.Println("no")
 		}

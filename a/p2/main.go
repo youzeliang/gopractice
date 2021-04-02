@@ -20,7 +20,7 @@ func main() {
 		go func() {
 			for {
 				select {
-				case <- stopCh:
+				case <-stopCh:
 					return
 				case dataCh <- rand.Intn(Max):
 				}
@@ -42,6 +42,6 @@ func main() {
 	}()
 
 	select {
-	case <- time.After(time.Hour):
+	case <-time.After(time.Hour):
 	}
 }

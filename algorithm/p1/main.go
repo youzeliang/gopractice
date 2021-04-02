@@ -11,11 +11,11 @@ func main() {
 	ss()
 }
 
-func m(nums []int) int{
+func m(nums []int) int {
 
-	var count ,major int
+	var count, major int
 
-	for _,m := range nums{
+	for _, m := range nums {
 
 		if count == 0 {
 			major = m
@@ -23,16 +23,13 @@ func m(nums []int) int{
 
 		if major == m {
 			count++
-		}else {
+		} else {
 			count--
 		}
-
-
 
 	}
 
 	return major
-
 
 }
 
@@ -51,8 +48,6 @@ func ss() {
 	})
 
 	fmt.Println(s)
-
-
 
 }
 

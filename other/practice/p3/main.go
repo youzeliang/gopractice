@@ -4,10 +4,10 @@ import "fmt"
 
 var (
 	firstName, lastName int
-	i int
-	f float32
-	input = "56.12 / 5212 / Go"
-	format = "%f / %d / %s"
+	i                   int
+	f                   float32
+	input               = "56.12 / 5212 / Go"
+	format              = "%f / %d / %s"
 )
 
 func main() {
@@ -20,4 +20,3 @@ func main() {
 	//fmt.Println("From the string we read: ", f, i, s)
 	// 输出结果: From the string we read: 56.12 5212 Go
 }
-

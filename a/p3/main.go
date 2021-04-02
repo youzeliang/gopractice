@@ -6,7 +6,6 @@ import (
 	"runtime/trace"
 )
 
-
 func main() {
 
 	//创建trace文件

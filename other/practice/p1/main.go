@@ -72,13 +72,6 @@ func container(nums []int, k int) bool {
 	return false
 }
 
-
-
-
-
-
-
-
 func intersect(nums1 []int, nums2 []int) []int {
 	res := []int{}
 	m1 := getInts(nums1)
@@ -126,16 +119,16 @@ func min(a, b int) int {
 
 func intersect1(nums1 []int, nums2 []int) []int {
 
-	m := make(map[int]int,len(nums1))
+	m := make(map[int]int, len(nums1))
 
-	for _,j := range nums1 {
+	for _, j := range nums1 {
 		m[j]++
 	}
 
 	k := 0
 	// 在nums2 存在
-	for _ ,j := range nums2 {
-		if m[j] > 0  {
+	for _, j := range nums2 {
+		if m[j] > 0 {
 			m[j]--
 			nums2[k] = j
 			k++
@@ -146,16 +139,16 @@ func intersect1(nums1 []int, nums2 []int) []int {
 
 }
 
-func in(nums []int,nums2 []int) []int {
-	m := make(map[int]int,len(nums))
+func in(nums []int, nums2 []int) []int {
+	m := make(map[int]int, len(nums))
 
-	for _,j := range nums{
+	for _, j := range nums {
 		m[j]++
 	}
 
 	k := 0
 
-	for _,j := range nums2{
+	for _, j := range nums2 {
 		if m[j] > 0 {
 			m[j]--
 			nums2[k] = j
@@ -165,17 +158,3 @@ func in(nums []int,nums2 []int) []int {
 
 	return nums2[0:k]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

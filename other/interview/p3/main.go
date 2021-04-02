@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	
+
 }
+
 // IWorkload 请勿修改接口
 type IWorkload interface {
 	// Process内包含一些耗时的处理，可能是密集计算或者外部IO
@@ -25,18 +26,13 @@ var TimeoutError = fmt.Errorf("timeout")
 // 提示：如果也实现了测试代码，请一并提交，将有利于分数评定
 
 type Demo struct {
-
 }
-
 
 func Question1(workload IWorkload) (err error) {
 
 	// ====== 在这里书写代码 ====== //
 
-
 	var a = &Demo{}
-
-
 
 	return
 }

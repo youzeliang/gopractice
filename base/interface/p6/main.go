@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 //抽象的银行业务员
-type AbstractBanker interface{
-	DoBusi()	//抽象的处理业务接口
+type AbstractBanker interface {
+	DoBusi() //抽象的处理业务接口
 }
 
 //存款的业务员
@@ -33,7 +33,6 @@ type PayBanker struct {
 func (pb *PayBanker) DoBusi() {
 	fmt.Println("进行了支付")
 }
-
 
 func main() {
 	//进行存款

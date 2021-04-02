@@ -12,7 +12,6 @@ type TreeNode struct {
 
 func d(root *TreeNode, val int) *TreeNode {
 
-
 	if root == nil {
 		return nil
 	}

@@ -42,8 +42,6 @@ func dog(dogch chan struct{}, counter int, catch chan struct{}) {
 	}
 	wg.Done()
 
-
-
 }
 
 func cat(catch chan struct{}, counter int, fishch chan struct{}) {
@@ -76,7 +74,6 @@ func fish(fishch chan struct{}, counter int, dogch chan struct{}) {
 	time.Sleep()
 
 }
-
 
 //题解：
 // 分别使用三个goroutine代表dog cat fish，由于携程执行的无顺序性，但是题目要求顺序循环输出，

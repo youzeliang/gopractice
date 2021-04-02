@@ -13,10 +13,9 @@ func main() {
 
 func p4() {
 	s := make([]int, 0)
-	s = append(s, 1,2,3)
+	s = append(s, 1, 2, 3)
 	fmt.Println(s)
 }
-
 
 func p3() {
 	a := 1
@@ -33,8 +32,7 @@ func calc(index string, a, b int) int {
 	return ret
 }
 
-
-func p2(){
+func p2() {
 	runtime.GOMAXPROCS(1)
 	int_chan := make(chan int, 1)
 	string_chan := make(chan string, 1)
@@ -48,7 +46,6 @@ func p2(){
 		panic(value)
 	}
 }
-
 
 func p1() {
 	runtime.GOMAXPROCS(1)

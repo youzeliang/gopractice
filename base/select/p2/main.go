@@ -20,7 +20,4 @@ func print(i int) {
 	<-ch
 	fmt.Println(i)
 
-
-
-
 }
