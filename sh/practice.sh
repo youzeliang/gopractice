@@ -1,2 +1,0 @@
-varname="fdsfa"
-echo ${#varname}
