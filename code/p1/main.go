@@ -71,7 +71,7 @@ func fish(fishch chan struct{}, counter int, dogch chan struct{}) {
 	}
 	wg.Done()
 
-	time.Sleep(1*time.Second)
+	time.Sleep(1 * time.Second)
 
 }
 
