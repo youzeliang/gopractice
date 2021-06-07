@@ -1,20 +1,40 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
+	"math/rand"
+	"sync"
+	"time"
 )
+
+var a = map[string]string{
+	"11": "111",
+	"22": "22",
+}
 
 func main() {
 
-	r := gin.Default()
+	//r := gin.Default()
+	//
+	//r.GET("/", func(c *gin.Context) {
+	//	c.String(http.StatusOK, "hello World!")
+	//})
+	//// 3.监听端口，默认在8080
+	//// Run("里面不指定端口号默认为8080")
+	//r.Run(":8000")
 
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "hello World!")
-	})
-	// 3.监听端口，默认在8080
-	// Run("里面不指定端口号默认为8080")
-	r.Run(":8000")
+	//for i := 0; i < 100; i++ {
+	//	fmt.Println(getRand(10))
+	//}
+
+
+}
+func getRand(num int) int {
+	rand.Seed(time.Now().UnixNano())
+	var mu sync.Mutex
+	mu.Lock()
+	v := rand.Intn(num)
+	mu.Unlock()
+	return v
 }
 
 type A struct {
