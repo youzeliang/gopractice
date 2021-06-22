@@ -48,7 +48,6 @@ func TestJsonToStruct(t *testing.T) {
 
 func TestGJSONGetSmallJson(t *testing.T) {
 
-
 }
 
 func BenchmarkGJSONGetSmallJson(b *testing.B) {
