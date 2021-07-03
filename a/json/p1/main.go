@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"time"
+
 	//"github.com/json-iterator/go"
 	"github.com/tidwall/gjson"
 )
@@ -145,17 +147,18 @@ func GJSONBigJson() {
 
 func main() {
 
-	//sizeof := unsafe.Sizeof(jsonBigStr)
-	//
-	//fmt.Println(sizeof)
-	//
-	//GJSONBigJson()
-	//var p = Person{
-	//	Age:  1,
-	//	Name: "Michel",
-	//	Addr: "BeiJing",
-	//}
-	//
-	//fmt.Println("v%", p)
+
+	timeStr := time.Now().Add(-8 * time.Hour).Format("2006-01-02")
+	//fmt.Println("timeStr:", timeStr)
+	t, _ := time.ParseInLocation("2006-01-02", timeStr, time.Local)
+	timeNumber := t.Unix()
+
+	timeStr1 := time.Now().Add( time.Hour).Format("2006-01-02")
+	//fmt.Println("timeStr:", timeStr)
+	t1, _ := time.ParseInLocation("2006-01-02", timeStr1, time.Local)
+	timeNumber1 := t1.Unix()
+
+	fmt.Println(timeNumber)
+	fmt.Println(timeNumber1)
 
 }
