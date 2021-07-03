@@ -10,6 +10,9 @@ func main() {
 	// 创建一个cache对象，默认ttl 5分钟，每10分钟对过期数据进行一次清理
 	c := cache.New(5*time.Minute, 10*time.Minute)
 
+
+
+
 	// Set一个KV，key是"foo"，value是"bar"
 	// TTL是默认值（上面创建对象的入参，也可以设置不同的值）5分钟
 	c.Set("foo", "bar", cache.DefaultExpiration)
@@ -20,6 +23,9 @@ func main() {
 	// 从cache中获取key对应的value
 	foo, found := c.Get("foo")
 	if found {
+
+
+
 		fmt.Println(foo)
 	}
 
