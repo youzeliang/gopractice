@@ -37,7 +37,6 @@ var (
 
 func main() {
 
-
 	if _, ok := TDOTTYPE[0][true]; ok != true {
 
 		fmt.Println(321321)
@@ -57,9 +56,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-
 	ss := `{"all":["x_param","x_response"],"talcamp":["x_param","x_response"]}`
-
 
 	var m map[string][]string
 
@@ -68,11 +65,10 @@ func main() {
 		fmt.Println(err)
 	}
 
-	for i,j := range m{
+	for i, j := range m {
 		fmt.Println(i)
 		fmt.Println(j)
 	}
-
 
 	fmt.Println(revMsg.Redis)
 

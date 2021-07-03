@@ -32,13 +32,8 @@ var (
 	}
 )
 
-
 func main() {
 
-
-
 	fmt.Println(TDOTTYPE[0][true])
-
-
 
 }

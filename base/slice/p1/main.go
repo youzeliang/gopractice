@@ -11,10 +11,8 @@ func main() {
 	//
 	//fmt.Println(remove)
 
+	s := "132"
 
-
-	s :="132"
-
-	aaa :=strings.Split(s, ",")
+	aaa := strings.Split(s, ",")
 	fmt.Println(aaa)
 }
