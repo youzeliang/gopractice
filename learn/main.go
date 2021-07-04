@@ -21,7 +21,6 @@ func main() {
 	// 从cache中获取key对应的value
 	foo, found := c.Get("foo")
 	if found {
-
 		fmt.Println(foo)
 	}
 
