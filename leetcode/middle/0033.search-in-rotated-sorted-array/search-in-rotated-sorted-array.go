@@ -23,3 +23,50 @@ func search(nums []int, target int) int {
 }
 
 // 参考 https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution/jian-dan-luo-lie-mei-yi-chong-qing-kuang-by-liu-zh/
+
+func sea(nums []int, target int) int {
+
+	left := 0
+	right := len(nums) - 1
+
+	for left < right {
+
+		middle := (left + right) / 2
+		if nums[middle] == target {
+			return middle
+		}
+
+		if (nums[left] <= target && target <= nums[middle]) || (nums[middle] <= nums[right] && target <= nums[middle]) {
+			right = middle - 1
+		} else {
+			left = middle + 1
+		}
+
+	}
+
+	return -1
+
+}
+
+func s(nums []int, target int) int {
+
+	left, right := 0, len(nums)-1
+
+	for left < right {
+		middle := (left + right) / 2
+
+		switch {
+		case nums[middle] < target:
+			left = middle + 1
+
+		case nums[middle]> target:
+			right = middle-1
+		default:
+			return middle
+		}
+	}
+
+	m := make(map[int]struct{})
+
+	return - 1
+}
