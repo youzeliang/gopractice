@@ -11,4 +11,6 @@ func Test_findDisappearedNumbers(t *testing.T) {
 	fmt.Println(findDisappearedNumbers(a))
 }
 
-
+func ()  {
+	
+}
