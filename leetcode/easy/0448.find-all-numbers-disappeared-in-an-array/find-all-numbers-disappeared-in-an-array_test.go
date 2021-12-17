@@ -8,9 +8,18 @@ import (
 func Test_findDisappearedNumbers(t *testing.T) {
 
 	var a = []int{1, 4, 1, 2}
-	fmt.Println(findDisappearedNumbers(a))
+	find(a)
 }
 
-func ()  {
-	
+func find(nums []int)  {
+	for _, value := range nums {
+		if value < 0 {
+			value = -value
+		}
+		if nums[value-1] > 0 {
+			nums[value-1] = -nums[value-1]
+		}
+	}
+
+	fmt.Println(nums)
 }
