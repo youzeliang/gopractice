@@ -1,18 +1,40 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+	"time"
+)
 
 func main() {
 
 
-	var a =  []int {6,6,6,6,6,6,6,0,7,7,7,7,7,7,7,7,6,6,7,7,7,7,7,7,7,7,7,7,7,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,0,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,7,7,7,7,7,7,7,7,7,7,7,7,6,7,7,7,7,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7}
+	waitTime()
+}
 
-	m := 0
-	for i := 0; i < len(a); i++ {
-		if a[i] != 0 {
-			m++
-		}
+func waitTime() {
+	var w = sync.WaitGroup{}
+	var ch = make(chan bool)
+	w.Add(2)
+	go func() {
+		time.Sleep(time.Second * 2)
+		fmt.Println("我2秒")
+		w.Done()
+	}()
+	go func() {
+		time.Sleep(time.Second * 6)
+		fmt.Println("我6秒")
+		w.Done()
+	}()
+	go func() {
+		w.Wait()
+		ch <- false
+	}()
+
+	select {
+	case <-time.After(time.Second * 5):
+		fmt.Println("我超时了")
+	case <-ch:
+		fmt.Println("我结束了")
 	}
-
-	fmt.Println(m)
 }

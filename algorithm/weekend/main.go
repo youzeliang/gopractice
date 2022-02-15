@@ -1,9 +1,30 @@
 package main
 
-import "sort"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
-	tupleSameProduct([]int{2, 3, 4, 6})
+
+	var a = []int{1,0,0,0,0,0,0,0, 2, 2, 8}
+
+	var b = []int{6, 6}
+
+	var k int
+	for i := 0; i < len(a); i++ {
+		if a[i] == 0 && len(b) > k  {
+			a[i] = b[k]
+			k++
+		}
+	}
+
+	if k <= len(b) {
+		a = append(a, b[k:]...)
+	}
+
+	fmt.Println(a)
+
 }
 
 func tupleSameProduct(nums []int) int {
