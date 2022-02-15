@@ -25,5 +25,4 @@ func main() {
 
 	fmt.Println(int64(-4))
 
-
 }

@@ -15,8 +15,8 @@ var (
 
 //请求消息
 type RequestInfo struct {
-	Context    context.Context
-	ReqData    interface{}
+	Context context.Context
+	ReqData interface{}
 }
 
 func init() {
@@ -30,7 +30,7 @@ func init() {
 	}
 }
 
-func channelHandler(ctx context.Context, chanIdx int) int{
+func channelHandler(ctx context.Context, chanIdx int) int {
 
 	defer WaitParentGroup.Done()
 
@@ -43,7 +43,6 @@ func channelHandler(ctx context.Context, chanIdx int) int{
 		}
 	}
 }
-
 
 func main() {
 

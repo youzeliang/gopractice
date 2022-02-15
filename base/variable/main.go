@@ -4,39 +4,13 @@ import "fmt"
 
 func main() {
 
-	var c = []int{1,2,3,4,5}
+	var c = []int{1, 2, 3, 4, 5}
 	i := 2
 	c = append(c[:i], c[i+1:]...)
 	fmt.Println(c)
 	findDisappearedNumbers(c)
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 遍历数组，将每个数字交换到它理应出现的位置上，下面情况不用换：
 // 当前数字本就出现在理应的位置上，跳过，不用换。

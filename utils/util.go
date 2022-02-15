@@ -33,8 +33,7 @@ type GetStuAllData struct {
 
 const aaaa = 1
 
-
-func aaa(){
+func aaa() {
 
 	if aaaa > -1 {
 		aaaa = 3

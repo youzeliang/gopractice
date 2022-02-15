@@ -1,5 +1,6 @@
 package main
 
+<<<<<<< HEAD
 import (
 	"encoding/binary"
 	"unsafe"
@@ -580,3 +581,12 @@ func CityHash128(s []byte, length uint32) (result Uint128) {
 
 	return
 }
+=======
+import "fmt"
+
+func main() {
+
+	fmt.Println(1 / 3)
+
+}
+>>>>>>> 019d9790d25543eb092bf612e47a058923e13fff

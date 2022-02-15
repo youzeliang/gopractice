@@ -1,9 +1,6 @@
 package main
 
-import (
-	"encoding/json"
-	"fmt"
-)
+import "fmt"
 
 var (
 	//辅导在线     = 1
@@ -37,39 +34,6 @@ var (
 
 func main() {
 
-	if _, ok := TDOTTYPE[0][true]; ok != true {
-
-		fmt.Println(321321)
-	}
-
-	type name struct {
-		All   float64 `json:"all"`
-		Redis float64 `json:"redis"`
-		Mysql float64 `json:"mysql"`
-	}
-
-	s := "{\"all\":0.01,\"redis\":0.4,\"mysql\":0.01,\"rpc\":0.01,\"http\":0.01,\"kafka\":0.01,\"etcd\":0.01}"
-
-	var revMsg name
-	err := json.Unmarshal([]byte(s), &revMsg)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	ss := `{"all":["x_param","x_response"],"talcamp":["x_param","x_response"]}`
-
-	var m map[string][]string
-
-	err = json.Unmarshal([]byte(ss), &m)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	for i, j := range m {
-		fmt.Println(i)
-		fmt.Println(j)
-	}
-
-	fmt.Println(revMsg.Redis)
+	fmt.Println(TDOTTYPE[0][true])
 
 }

@@ -7,13 +7,13 @@ import (
 
 func main() {
 
-	var a = []int{1,0,0,0,0,0,0,0, 2, 2, 8}
+	var a = []int{1, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8}
 
 	var b = []int{6, 6}
 
 	var k int
 	for i := 0; i < len(a); i++ {
-		if a[i] == 0 && len(b) > k  {
+		if a[i] == 0 && len(b) > k {
 			a[i] = b[k]
 			k++
 		}
