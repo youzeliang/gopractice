@@ -2,31 +2,66 @@ package main
 
 import (
 	"fmt"
+	"github.com/spf13/cast"
 	"sort"
+	"strings"
 )
+
+const (
+	FromTypeDixData = 7
+)
+
+const (
+	Services uint8 = iota
+	PC
+	Ipad
+	IPhone
+	Android
+	PCClient
+	Touch
+	FixData
+)
+
 
 func main() {
 
-	var a = []int{1, 0, 0, 0, 0, 0, 0, 0, 2, 2, 8}
 
-	var b = []int{6, 6}
+	var a = []int{6,6,6,6,0,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6}
 
-	var k int
-	for i := 0; i < len(a); i++ {
-		if a[i] == 0 && len(b) > k {
-			a[i] = b[k]
-			k++
+	s := 0
+	for i := 0; i <len(a) ; i++ {
+		if a[i] == 6 {
+			s++
 		}
 	}
 
-	if k <= len(b) {
-		a = append(a, b[k:]...)
+	fmt.Println(s,"ssssss")
+
+
+	var buffer strings.Builder
+
+	aa:= []int{1,2,3,4}
+	for i := 0; i < len(aa) ; i++ {
+		buffer.WriteString(cast.ToString(aa[i]))
+		buffer.WriteString(",")
 	}
 
-	fmt.Println(a)
+	fmt.Println(buffer)
+
+	//var a = "123"
+
+
+	//minimumRounds(a)
 
 }
 
+func minimumRounds(tasks string) {
+
+
+
+	fmt.Println(string(FixData))
+
+}
 func tupleSameProduct(nums []int) int {
 	if len(nums) > 4 {
 		nums = append(nums, nums[:len(nums)-1]...)

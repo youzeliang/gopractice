@@ -2,8 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"math/rand"
 )
+
+const name = 7
 
 func main() {
 	//Ts()
@@ -12,13 +15,12 @@ func main() {
 }
 
 func ffaa() {
-	a := [2]int{5, 6}
-	b := [2]int{5, 6}
-	if a == b {
-		fmt.Println("equal")
-	} else {
-		fmt.Println("not equal")
-	}
+	r := gin.Default()
+	r.GET("/", func(c *gin.Context) {
+		c.String(200, "Hello, Geektutu")
+	})
+	r.Run() // listen and serve on 0.0.0.0:8080
+
 }
 
 func Ts() {
