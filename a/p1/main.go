@@ -1,17 +1,33 @@
 package main
 
 import (
+	"crypto/md5"
 	"fmt"
 	"go/ast"
 	"go/importer"
 	"go/parser"
 	"go/token"
 	"go/types"
+	"io"
 )
 
 func main() {
-	m, _ := ParseFile("./errcode.go")
-	fmt.Printf("%#v", m)
+	//m, _ := ParseFile("./errcode.go")
+	//fmt.Printf("%#v", m)
+
+	fmt.Println(GetSign("71118074","180150386","1746357"))
+}
+
+func Md5(str string) string {
+	w := md5.New()
+	io.WriteString(w, str)
+	md5str := fmt.Sprintf("%x", w.Sum(nil))
+	return md5str
+}
+
+func GetSign(stuId, stuCouId, planId string) (token string) {
+	sign := "Xes-Report-Token-" + stuId + "-" + stuCouId + "-" + planId
+	return Md5(sign)
 }
 
 func ParseFile(fileName string) (map[string]string, error) {

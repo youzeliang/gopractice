@@ -12,13 +12,18 @@ func main() {
 }
 
 func ffaa() {
-	a := [2]int{5, 6}
-	b := [2]int{5, 6}
-	if a == b {
-		fmt.Println("equal")
-	} else {
-		fmt.Println("not equal")
+
+
+	var a = []int{6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6}
+
+	sum := 0
+	for i := 0; i < len(a); i++ {
+		if a[i] == 6 {
+			sum++
+		}
 	}
+
+	fmt.Println(sum)
 }
 
 func Ts() {
