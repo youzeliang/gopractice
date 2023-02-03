@@ -22,26 +22,23 @@ const (
 	FixData
 )
 
-
 func main() {
 
-
-	var a = []int{6,6,6,6,0,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6}
+	var a = []int{6, 6, 6, 6, 0, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6}
 
 	s := 0
-	for i := 0; i <len(a) ; i++ {
+	for i := 0; i < len(a); i++ {
 		if a[i] == 6 {
 			s++
 		}
 	}
 
-	fmt.Println(s,"ssssss")
-
+	fmt.Println(s, "ssssss")
 
 	var buffer strings.Builder
 
-	aa:= []int{1,2,3,4}
-	for i := 0; i < len(aa) ; i++ {
+	aa := []int{1, 2, 3, 4}
+	for i := 0; i < len(aa); i++ {
 		buffer.WriteString(cast.ToString(aa[i]))
 		buffer.WriteString(",")
 	}
@@ -50,14 +47,11 @@ func main() {
 
 	//var a = "123"
 
-
 	//minimumRounds(a)
 
 }
 
 func minimumRounds(tasks string) {
-
-
 
 	fmt.Println(string(FixData))
 

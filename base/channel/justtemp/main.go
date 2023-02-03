@@ -85,7 +85,7 @@ func main() {
 		}
 	}
 
-	fmt.Println("--------",co)
+	fmt.Println("--------", co)
 
 	var a = durationInfo{
 		TDots:    db,

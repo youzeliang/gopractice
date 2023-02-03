@@ -36,11 +36,9 @@ func main() {
 	var en = "12"
 	var b = "14"
 
-
 	if en > b {
 
 	}
-
 
 	data = append(data, c)
 

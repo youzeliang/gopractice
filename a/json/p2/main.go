@@ -54,14 +54,11 @@ func GetSign(stuId, stuCouId, planId string) (token string) {
 
 func main() {
 
-
 	garr := strings.Split("", ",")
-
 
 	fmt.Println(len(garr))
 
-
-	to :=GetSign("[{\"stuId\":59616,\"stuCouId\":10056662}]","173937","1477478")
+	to := GetSign("[{\"stuId\":59616,\"stuCouId\":10056662}]", "173937", "1477478")
 	fmt.Println(to)
 
 	//var a = "{\"status\":100,\"data\":{\"id\":\"1034083\",\"app_id\":\"45\",\"name\":\"321\",\"year_id\":\"21\",\"term_id\":\"1\",\"grade_id\":\"7\",\"base_info_extend_field\":\"{}\",\"parent_id\":\"0\",\"other_extend_info\":\"{}\",\"sort\":\"1\",\"status\":\"3\",\"unique_video_id\":\"0\",\"school_id\":\"1\",\"catalog_info\":[]}}"

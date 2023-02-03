@@ -5,24 +5,18 @@ import (
 	"sync"
 )
 
+var wg sync.WaitGroup
+
 func main() {
-	g()
-}
-
-func g() {
-	var wg sync.WaitGroup
-
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 10; i++ {
 		wg.Add(1)
-		go func(i int, wg sync.WaitGroup) {
-			fmt.Println(i)
-			defer wg.Done()
-		}(i, wg)
+		go hello(i)
 	}
-	wg.Wait()
-	fmt.Println("finished")
 
-	//time.Sleep(time.Second*10)
+	wg.Wait()
 }
 
-// waitGroup 的add 要在goroutine之前执行
+func hello(i int) {
+	defer wg.Done()
+	fmt.Println(i)
+}
