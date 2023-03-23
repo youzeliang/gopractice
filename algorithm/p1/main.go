@@ -2,13 +2,38 @@ package main
 
 import (
 	"fmt"
+	"github.com/spf13/cast"
 	"sort"
+
 	"strings"
 )
 
 func main() {
 
-	ss()
+	//ss()
+
+	testSlice()
+}
+
+func testString() {
+	topicIDList := make([]string, 3)
+	var a = []int{1, 2, 3}
+
+	for _, j := range a {
+		topicIDList = append(topicIDList, cast.ToString(j))
+	}
+
+	ss := strings.Join(topicIDList, ",")
+	fmt.Println(ss)
+
+}
+
+func testSlice() {
+	var a = []int{1, 2, 3}
+
+	c := a[:2]
+	fmt.Println(c)
+
 }
 
 func m(nums []int) int {
@@ -44,7 +69,7 @@ func ss() {
 	fmt.Println(s)
 
 	sort.Slice(s, func(i, j int) bool {
-		return s[i][0] < s[j][0]
+		return s[i][0] > s[j][0]
 	})
 
 	fmt.Println(s)
