@@ -15,7 +15,7 @@ func main() {
 	//m, _ := ParseFile("./errcode.go")
 	//fmt.Printf("%#v", m)
 
-	fmt.Println(GetSign("71118074","180150386","1746357"))
+	fmt.Println(GetSign("71118074", "180150386", "1746357"))
 }
 
 func Md5(str string) string {

@@ -10,16 +10,16 @@ func test(n int, c chan int) {
 		if err := recover(); err != nil {
 			fmt.Println(err)
 		}
-		test(n,c)
+		test(n, c)
 
 		c <- n
 	}()
-	 test(n,c)
+	test(n, c)
 
 	panic(fmt.Sprintf("panic: %d", n))
 }
 
-func aa(){
+func aa() {
 	panic(312)
 }
 
@@ -40,22 +40,20 @@ func main() {
 	go a()
 
 	time.Sleep(10)
-	select {
-
-	}
+	select {}
 }
 
-func a()  {
+func a() {
 	fmt.Println(1)
 	go b()
 }
 
-func b()  {
+func b() {
 	fmt.Println(2)
 	go c()
 }
 
-func c()  {
+func c() {
 
 	fmt.Println(3)
 	go d()
@@ -65,6 +63,6 @@ func c()  {
 
 }
 
-func d()  {
+func d() {
 	fmt.Println(4)
 }
