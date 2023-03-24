@@ -13,6 +13,7 @@ func main() {
 
 	go func() {
 		time.Sleep(time.Second * deadLockCase)
+
 		fmt.Println("Writer Try")
 		rw.Lock()
 		fmt.Println("Writer Fetch")
