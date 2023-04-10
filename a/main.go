@@ -6,7 +6,11 @@ import (
 )
 
 func main() {
-	ff()
+
+	a := [][]int{{1, 2}, {3, 4}, {5, 6}, {7, 8}}
+
+	fmt.Println(len(a[0]))
+
 }
 
 type person struct {

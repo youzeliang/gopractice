@@ -14,7 +14,6 @@ func main() {
 
 }
 
-
 func hashID(id string) uint32 {
 	chanIdx := CityHash32([]byte(id), uint32(len(id))) % uint32(4)
 	return chanIdx
@@ -32,9 +31,9 @@ func unalignedLoad64(p []byte) (result uint64) {
 	return binary.LittleEndian.Uint64(p)
 	/*
 	   if little {
-	       result = binary.LittleEndian.Uint64(p)
+	       result = binary.LittleEndian.Uint64(p6)
 	   } else {
-	       result = binary.BigEndian.Uint64(p)
+	       result = binary.BigEndian.Uint64(p6)
 	   }
 	   return result
 	*/
@@ -44,9 +43,9 @@ func unalignedLoad32(p []byte) (result uint32) {
 	return binary.LittleEndian.Uint32(p)
 	/*
 	   if little {
-	       result = binary.LittleEndian.Uint32(p)
+	       result = binary.LittleEndian.Uint32(p6)
 	   } else {
-	       result = binary.BigEndian.Uint32(p)
+	       result = binary.BigEndian.Uint32(p6)
 	   }
 	   return result
 	*/
@@ -98,12 +97,12 @@ func uint64InExpectedOrder(x uint64) uint64 {
 // https://code.google.com/p/cityhash/source/browse/trunk/src/city.cc#112
 func fetch64(p []byte) uint64 {
 	return binary.LittleEndian.Uint64(p)
-	//return uint64InExpectedOrder(unalignedLoad64(p))
+	//return uint64InExpectedOrder(unalignedLoad64(p6))
 }
 
 func fetch32(p []byte) uint32 {
 	return binary.LittleEndian.Uint32(p)
-	//return uint32InExpectedOrder(unalignedLoad32(p))
+	//return uint32InExpectedOrder(unalignedLoad32(p6))
 }
 
 const (

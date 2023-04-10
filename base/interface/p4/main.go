@@ -9,11 +9,11 @@ func (m myWriter) Write(p []byte) (n int, err error) {
 	panic("implement me")
 }
 
-//func (m myWriter) Write(p []byte) (n int, err error) {
+//func (m myWriter) Write(p6 []byte) (n int, err error) {
 //	panic("implement me")
 //}
 
-/*func (w myWriter) Write(p []byte) (n int, err error) {
+/*func (w myWriter) Write(p6 []byte) (n int, err error) {
 	return
 }*/
 

@@ -15,12 +15,27 @@ func main() {
 }
 
 func ffaa() {
+<<<<<<< HEAD
+
+
+	var a = []int{6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6}
+
+	sum := 0
+	for i := 0; i < len(a); i++ {
+		if a[i] == 6 {
+			sum++
+		}
+	}
+
+	fmt.Println(sum)
+=======
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
 		c.String(200, "Hello, Geektutu")
 	})
 	r.Run() // listen and serve on 0.0.0.0:8080
 
+>>>>>>> 9ffb43e3806758d7cdbde180b68cce6f43591c8d
 }
 
 func Ts() {
