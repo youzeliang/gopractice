@@ -13,7 +13,7 @@ var (
 	WaitParentGroup *sync.WaitGroup
 )
 
-//请求消息
+// 请求消息
 type RequestInfo struct {
 	Context context.Context
 	ReqData interface{}

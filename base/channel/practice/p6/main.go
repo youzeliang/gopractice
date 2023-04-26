@@ -34,7 +34,7 @@ func main() {
 	}
 }
 
-//生产数据
+// 生产数据
 func makeTask(queueName string, n int) chan string {
 	ch := make(chan string, n)
 	go func() {
@@ -48,7 +48,7 @@ func makeTask(queueName string, n int) chan string {
 	return ch
 }
 
-//消费数据
+// 消费数据
 func worker() chan<- string {
 	ch := make(chan string) //无缓冲通道
 	go func(tasks chan string) {

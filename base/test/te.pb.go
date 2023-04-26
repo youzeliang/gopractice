@@ -84,11 +84,11 @@ func (Person_Skills) EnumDescriptor() ([]byte, []int) {
 	return file_te_proto_rawDescGZIP(), []int{0, 0}
 }
 
-//message 用来定义一个数据结构
-//repeated 的使用：被 repeated 标识的字段可以理解为是一个数组
-//enum 类型使用：枚举用来表示一定范围内具有相同属性的值
-//message 类型的使用： message 在定义过程中是可以声明自己定义的 message 类型
-//map 类型的使用：message 定义时可以使用 map 类型
+// message 用来定义一个数据结构
+// repeated 的使用：被 repeated 标识的字段可以理解为是一个数组
+// enum 类型使用：枚举用来表示一定范围内具有相同属性的值
+// message 类型的使用： message 在定义过程中是可以声明自己定义的 message 类型
+// map 类型的使用：message 定义时可以使用 map 类型
 type Person struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

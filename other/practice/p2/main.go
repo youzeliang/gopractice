@@ -8,21 +8,21 @@ import (
 	"time"
 )
 
-//global var
+// global var
 var sequence int = 0
 var lastTime int = -1
 
-//every segment bit
+// every segment bit
 var workerIdBits = 5
 var datacenterIdBits = 5
 var sequenceBits = 12
 
-//every segment max number
+// every segment max number
 var maxWorkerId int = -1 ^ (-1 << workerIdBits)
 var maxDatacenterId int = -1 ^ (-1 << datacenterIdBits)
 var maxSequence int = -1 ^ (-1 << sequenceBits)
 
-//bit operation shift
+// bit operation shift
 var workerIdShift = sequenceBits
 var datacenterShift = workerIdBits + sequenceBits
 var timestampShift = datacenterIdBits + workerIdBits + sequenceBits
