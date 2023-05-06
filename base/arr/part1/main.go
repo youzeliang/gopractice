@@ -14,12 +14,8 @@ func main() {
 
 	var a = [5]int{1, 3, 2}
 
-	for i, i2 := range a {
-
-	}
+	fmt.Println(a)
 
 	//var a []int
-
-	a = append(a)
 
 }
