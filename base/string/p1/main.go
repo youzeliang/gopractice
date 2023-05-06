@@ -1,9 +1,9 @@
 package main
 
-<<<<<<< HEAD
 import (
 	"fmt"
 	"math/rand"
+	"strings"
 )
 
 func main() {
@@ -36,8 +36,7 @@ func a() {
 
 	fmt.Println("end")
 }
-=======
-<<<<<<< HEAD
+
 import "fmt"
 
 func main()  {
@@ -73,5 +72,3 @@ func main() {
 func len(nums []int) int {
 	return 0
 }
->>>>>>> 019d9790d25543eb092bf612e47a058923e13fff
->>>>>>> 9ffb43e3806758d7cdbde180b68cce6f43591c8d
