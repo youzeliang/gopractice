@@ -1,4 +1,4 @@
-//Nsq发送测试
+// Nsq发送测试
 package main
 
 import (
@@ -47,7 +47,7 @@ func InitProducer(str string) {
 	}
 }
 
-//发布消息
+// 发布消息
 func Publish(topic string, message string) error {
 	var err error
 	if producer != nil {

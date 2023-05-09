@@ -18,7 +18,7 @@ type Server struct {
 	Message chan string
 }
 
-//创建一个server的接口
+// 创建一个server的接口
 func NewServer(ip string, port int) *Server {
 	server := &Server{
 		Ip:        ip,
@@ -30,7 +30,7 @@ func NewServer(ip string, port int) *Server {
 	return server
 }
 
-//监听Message广播消息channel的goroutine，一旦有消息就发送给全部的在线User
+// 监听Message广播消息channel的goroutine，一旦有消息就发送给全部的在线User
 func (this *Server) ListenMessager() {
 	for {
 		msg := <-this.Message
@@ -44,7 +44,7 @@ func (this *Server) ListenMessager() {
 	}
 }
 
-//广播消息的方法
+// 广播消息的方法
 func (this *Server) BroadCast(user *User, msg string) {
 	sendMsg := "[" + user.Addr + "]" + user.Name + ":" + msg
 
@@ -69,7 +69,7 @@ func (this *Server) Handler(conn net.Conn) {
 	select {}
 }
 
-//启动服务器的接口
+// 启动服务器的接口
 func (this *Server) Start() {
 	//socket listen
 	listener, err := net.Listen("tcp", fmt.Sprintf("%s:%d", this.Ip, this.Port))

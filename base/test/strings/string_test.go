@@ -66,6 +66,7 @@ func BenchmarkSplitParallel(b *testing.B) {
 }
 
 func ExampleSplit() {
+
 	fmt.Println(Split("a:b:c", ":"))
 	fmt.Println(Split("aa1aa", "1"))
 	// Output:

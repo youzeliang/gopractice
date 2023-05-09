@@ -1,6 +1,7 @@
 package main
 
 import (
+<<<<<<< HEAD
 	"reflect"
 	"strings"
 	"testing"
@@ -19,4 +20,21 @@ func BenchmarkSplit(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		strings.Split("枯藤老树昏鸦", "老")
 	}
+=======
+	"fmt"
+	"testing"
+	"time"
+)
+
+func BenchmarkFoo(b *testing.B) {
+	expensiveSetup()
+	b.ResetTimer() // Reset the benchmark timer
+	for i := 0; i < b.N; i++ {
+		fmt.Println(123)
+	}
+}
+
+func expensiveSetup() {
+	time.Sleep(time.Second * 2)
+>>>>>>> 9dad412f07f955fe7cf7c2792221d5e58f71b91e
 }
