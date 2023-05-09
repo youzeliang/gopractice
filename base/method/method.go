@@ -12,6 +12,8 @@ type User struct {
 func (u *User) Notify() {
 	fmt.Printf("%v : %v \n", u.Name, u.Email)
 }
+
+// 实现一个
 func main() {
 	// 值类型调用方法
 	u1 := User{"golang", "golang@golang.com"}
