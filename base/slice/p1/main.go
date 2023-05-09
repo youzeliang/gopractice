@@ -2,17 +2,11 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func main() {
-	//a := []int{1, 2, 3}
-	//remove := a[len(a)-5:]
-	//
-	//fmt.Println(remove)
-
-	s := "132"
-
-	aaa := strings.Split(s, ",")
-	fmt.Println(aaa)
+	a := []int{1, 2, 3, 4, 5}
+	shadow := a[1:3]
+	shadow = append(shadow, 100)
+	fmt.Println(shadow, a)
 }
