@@ -2,45 +2,42 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"log"
-	"time"
+	"net/http"
 )
 
-func Logger() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		t := time.Now()
+// Middleware 设计一个中间件，实现类似于gin框架可以建立多个中间件还可以一次性返回
+type Middleware func(http.Handler) http.Handler
 
-		// Set example variable
-		c.Set("example", "123")
-
-		c.Next()
-
-		//请求处理之后
-		latency := time.Since(t)
-		log.Print(latency)
-
-		// access the status we are sending
-		status := c.Writer.Status()
-		log.Println(status)
-
+func MiddlewareChain(h http.Handler, middlewares ...Middleware) http.Handler {
+	for _, middleware := range middlewares {
+		h = middleware(h)
 	}
+	return h
+}
+
+func Logger(h http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("Logger Middleware")
+		h.ServeHTTP(w, r)
+	})
+}
+
+func Auth(h http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("Auth Middleware")
+		h.ServeHTTP(w, r)
+	})
 }
 
 func main() {
-	r := gin.New()
+	mux := http.NewServeMux()
 
-	//引入Logger()中间件
-	r.Use(Logger())
-
-	r.GET("/test", func(c *gin.Context) {
-		example := c.MustGet("example").(string)
-		//打印关联的全部处理路由函数
-		fmt.Println(c.HandlerNames())
-		// it would print: "12345"
-		log.Println(example)
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello, World!")
 	})
 
-	// Listen and serve on 0.0.0.0:8080
-	r.Run(":8080")
+	// 使用 MiddlewareChain 函数组装多个中间件
+	handler := MiddlewareChain(mux, Logger, Auth)
+
+	http.ListenAndServe(":8080", handler)
 }
