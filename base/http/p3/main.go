@@ -1,6 +1,24 @@
 package main
 
 import (
+<<<<<<< HEAD
+	"io"
+	"log"
+	"net/http"
+)
+
+func sayhello(wr http.ResponseWriter, r *http.Request) {
+	wr.WriteHeader(200)
+	io.WriteString(wr, "hello world")
+}
+
+func main() {
+	http.HandleFunc("/", sayhello)
+	err := http.ListenAndServe(":9090", nil)
+	if err != nil {
+		log.Fatal("ListenAndServe:", err)
+	}
+=======
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -34,4 +52,5 @@ func HandleFile(url string) []interface{} {
 		voiceIdList[i] = s
 	}
 	return voiceIdList
+>>>>>>> 79fea1e7c0a9df79486c00c4a59be9b4cf592aad
 }
