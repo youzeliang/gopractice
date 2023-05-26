@@ -7,7 +7,15 @@ import (
 
 func main() {
 
-	worker()
+	//worker()
+
+	x := make(chan int, 1)
+	go func() {
+		x <- 1
+	}()
+	dd := <-x
+	fmt.Println(dd)
+
 }
 
 func worker() {
