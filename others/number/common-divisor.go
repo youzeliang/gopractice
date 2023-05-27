@@ -17,7 +17,7 @@ package number
 //附上两条重要性质：gcd(a,b)=gcd(b,a)，gcd(-a,b)=gcd(a,b)
 
 /*
-*穷举法：最大公约数
+*   穷举法：最大公约数
  */
 func gcdNormal(x, y int) int {
 	var n int
