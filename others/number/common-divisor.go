@@ -2,7 +2,7 @@ package number
 
 // greatest common divisor
 
-//欧几里得辗转相除法：
+//  欧几里得辗转相除法：
 //
 //gcd(x,y)表示x和y的最大公约数
 //
