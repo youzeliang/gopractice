@@ -1,9 +1,6 @@
 package main
 
 import "fmt"
-import (
-	_ "github.com/youzeliang/gopractice/base/func/init"
-)
 
 func adder() func(int) int {
 	sum := 0
