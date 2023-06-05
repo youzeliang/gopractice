@@ -2,7 +2,7 @@ package number
 
 // greatest common divisor
 
-//欧几里得辗转相除法：
+//  欧几里得辗转相除法：
 //
 //gcd(x,y)表示x和y的最大公约数
 //
@@ -17,7 +17,7 @@ package number
 //附上两条重要性质：gcd(a,b)=gcd(b,a)，gcd(-a,b)=gcd(a,b)
 
 /*
-*穷举法：最大公约数
+*   穷举法：最大公约数
  */
 func gcdNormal(x, y int) int {
 	var n int

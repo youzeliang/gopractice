@@ -59,8 +59,13 @@ func s(nums []int, target int) int {
 		case nums[middle] < target:
 			left = middle + 1
 
+<<<<<<< HEAD
 		case nums[middle]> target:
 			right = middle-1
+=======
+		case nums[middle] > target:
+			right = middle - 1
+>>>>>>> 3955728f17484cc4ab190a6b46fde0df977ec4e4
 		default:
 			return middle
 		}
@@ -68,5 +73,9 @@ func s(nums []int, target int) int {
 
 	m := make(map[int]struct{})
 
+<<<<<<< HEAD
 	return - 1
+=======
+	return -1
+>>>>>>> 3955728f17484cc4ab190a6b46fde0df977ec4e4
 }

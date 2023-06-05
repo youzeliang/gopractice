@@ -39,7 +39,7 @@ func next(nums []int) {
 		i--
 	}
 
-	if i == - 1 {
+	if i == -1 {
 		sort.Ints(nums)
 	} else {
 		j := len(nums) - 1
