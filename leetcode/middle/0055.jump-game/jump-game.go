@@ -1,33 +1,34 @@
 package _055_jump_game
 
-func canJump(nums []int) bool {
+func calJump(nums []int) bool {
+
 	l := len(nums)
-	for i := l - 1; i > 0; i-- {
+
+	for i := l - 1; i >= 0; i-- {
 		if nums[i]+i >= l {
 			l = i
 		}
 	}
+
 	return l <= 0
 }
 
-func canJump2(nums []int) bool {
-	cover := nums[0]
+func jump(num []int) bool {
 
-	for i := 0; i < cover; i++ {
-		if cover > nums[i]+i {
+	cover := num[0]
+
+	for i := 0; i <=cover;i++ {
+		if cover >= len(num) -1 {
 			return true
 		}
 
-		cover = max(cover, nums[i]+i)
+		cover = max(cover i + num[i])
 	}
-
-	return false
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
 
-	return b
+func max(a,b int) int {
+	if a > b {
+
+	}
 }
