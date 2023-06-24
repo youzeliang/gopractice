@@ -1,4 +1,4 @@
-package router
+package main
 
 import (
 	"fmt"
@@ -40,3 +40,8 @@ func doxx(i int) {
 }
 
 // 时间A和B 以时间长的为间隔周期
+
+func main() {
+	g := gin.New()
+	Crontab(g)
+}
