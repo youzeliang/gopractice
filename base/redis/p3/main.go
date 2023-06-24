@@ -20,7 +20,7 @@ func main() {
 		if err != nil {
 			fmt.Println(111)
 		}
-		fmt.Println("发送完了")
+		fmt.Println("发送完了", i)
 		//time.Sleep(time.Second * 1)
 
 	}

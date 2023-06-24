@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"github.com/go-redis/redis"
-	"time"
 )
 
 func main() {
@@ -24,14 +23,14 @@ func main() {
 
 		fmt.Println("接受到了一个", res[1])
 
-		aa(res[1])
+		//aa(res[1])
 
 	}
 
 }
 
-func aa(res string) {
-
-	fmt.Println(res)
-	time.Sleep(time.Second * 10)
-}
+//func aa(res string) {
+//
+//	fmt.Println(res)
+//	time.Sleep(time.Second * 10)
+//}
