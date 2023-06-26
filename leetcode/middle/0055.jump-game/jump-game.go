@@ -1,27 +1,34 @@
 package _055_jump_game
 
-func canJump(nums []int) bool {
+func calJump(nums []int) bool {
 
-	for i := len(nums) - 2; i >= 0; i-- {
-		// 找到数值为 0 的元素
-		if nums[i] != 0 {
-			continue
-		}
+	l := len(nums)
 
-		j := i - 1
-		for ; j >= 0; j-- {
-			if i-j < nums[j] {
-				// 在 j 号位置上，可以跨过 0 元素
-				i = j
-				break
-			}
-		}
-
-		if j == -1 {
-			// 在 0 元素之前，没有位置可以跨过 0
-			return false
+	for i := l - 1; i >= 0; i-- {
+		if nums[i]+i >= l {
+			l = i
 		}
 	}
 
-	return true
+	return l <= 0
+}
+
+func jump(num []int) bool {
+
+	cover := num[0]
+
+	for i := 0; i <=cover;i++ {
+		if cover >= len(num) -1 {
+			return true
+		}
+
+		cover = max(cover i + num[i])
+	}
+}
+
+
+func max(a,b int) int {
+	if a > b {
+
+	}
 }

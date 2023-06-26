@@ -4,18 +4,18 @@ package _392_is_subsequence
 // 双指针遍历
 
 func isSubsequence(s string, t string) bool {
-	if len(s) > len(t) {
-		return false
-	}
 
-	t1, t2 := 0, 0
-	for t1 < len(s) && t2 < len(t) {
-		if s[t1] == t[t2] {
-			t1++
+	n, m := len(s), len(t)
+
+	i, j := 0, 0
+
+	for i < n && j < m {
+		if s[i] == t[j] {
+			i++
 		}
-
-		t2++
+		j++
 	}
 
-	return t1 == len(s)
+	return i == n
+
 }

@@ -65,7 +65,11 @@ func s(nums []int, target int) int {
 =======
 		case nums[middle] > target:
 			right = middle - 1
+<<<<<<< HEAD
 >>>>>>> c8ee5da297c6341258cd96427f6b44501c49185a
+=======
+>>>>>>> 3955728f17484cc4ab190a6b46fde0df977ec4e4
+>>>>>>> 35c5e937bc81bbbc8299e6c42daff1e83721e0f3
 		default:
 			return middle
 		}
@@ -77,5 +81,9 @@ func s(nums []int, target int) int {
 	return - 1
 =======
 	return -1
+<<<<<<< HEAD
 >>>>>>> c8ee5da297c6341258cd96427f6b44501c49185a
+=======
+>>>>>>> 3955728f17484cc4ab190a6b46fde0df977ec4e4
+>>>>>>> 35c5e937bc81bbbc8299e6c42daff1e83721e0f3
 }
