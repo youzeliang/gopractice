@@ -120,7 +120,7 @@ func TestSlice() {
 
 	m := map[string]string{"q": "q", "w": "w", "e": "e", "r": "r", "t": "t", "y": "y"}
 	var slice []string
-	for k, _ := range m {
+	for k := range m {
 		slice = append(slice, k)
 	}
 	fmt.Printf("clise string is : %v\n", slice)

@@ -32,12 +32,12 @@ func Test_problems27(t *testing.T) {
 			ans{[]int{2, 2}},
 		},
 
-		question{
+		{
 			para{[]int{3, 1, 5, 7, 2, 2, 3}, 3},
 			ans{[]int{2, 1, 5, 7, 2}},
 		},
 
-		question{
+		{
 			para{[]int{1, 5, 7, 2, 2}, 3},
 			ans{[]int{1, 5, 7, 2, 2}},
 		},

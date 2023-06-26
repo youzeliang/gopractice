@@ -1,0 +1,26 @@
+#redis:
+#
+#  addr: 10.170.124.26:6379
+
+
+mysql:
+  addr: rm-bp1lck87254dnsaelvo.mysql.rds.aliyuncs.com:3306
+  user: root
+  password: Lyz123456
+  database: test
+  maxidleconns: 10
+  maxopenconns: 1000
+
+
+port: 8080
+
+
+
+loglevel: debug
+
+http:
+  timeout: 3
+  maxidleconns: 300
+  maxidleconnsperhost: 100
+
+

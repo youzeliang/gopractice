@@ -29,7 +29,7 @@ func Test_num0268(t *testing.T) {
 			ans{3},
 		},
 
-		question{
+		{
 			para{
 				[]int{5, 4, 0, 1, 3},
 			},
@@ -38,7 +38,7 @@ func Test_num0268(t *testing.T) {
 			},
 		},
 
-		question{
+		{
 			para{
 				[]int{0, 1, 3},
 			},

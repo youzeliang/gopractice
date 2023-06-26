@@ -29,27 +29,27 @@ func Test_num35(t *testing.T) {
 	ast := assert.New(t)
 
 	qs := []question{
-		question{
+		{
 			para{[]int{1, 3, 5, 6}, 5},
 			ans{2},
 		},
 
-		question{
+		{
 			para{[]int{1, 3, 5, 6}, 2},
 			ans{1},
 		},
 
-		question{
+		{
 			para{[]int{1, 3, 5, 6}, 7},
 			ans{4},
 		},
 
-		question{
+		{
 			para{[]int{1, 3, 5, 6}, 0},
 			ans{0},
 		},
 
-		question{
+		{
 			para{[]int{1, 3, 5, 6}, 6},
 			ans{3},
 		},

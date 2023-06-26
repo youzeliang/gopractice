@@ -11,7 +11,7 @@ func Test_findDisappearedNumbers(t *testing.T) {
 	find(a)
 }
 
-func find(nums []int)  {
+func find(nums []int) {
 	for _, value := range nums {
 		if value < 0 {
 			value = -value

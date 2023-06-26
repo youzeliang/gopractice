@@ -1,6 +1,6 @@
 module github.com/youzeliang/goalgorithm
 
-go 1.14
+go 1.18
 
 require (
 	github.com/gin-gonic/gin v1.6.3

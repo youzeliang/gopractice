@@ -2,13 +2,13 @@ package offer03
 
 // 此题可以定义一个map来判断，但是有没有更好地方法不开辟新的空间来做，由于数组中的元素都大于等于0，把对应位置的值变为负数
 func findRepeatNumber(nums []int) int {
-	for _,j := range nums {
+	for _, j := range nums {
 		if j < 0 {
 			j = -1 * j
 		}
 		if nums[j] < 0 {
 			return j
-		}else{
+		} else {
 			nums[j] = -1 * j //设置为负数
 		}
 
