@@ -12,8 +12,10 @@ https://leetcode.com/problems/single-number-ii/
 
 */
 
-/**
- 解题思路
+/*
+*
+
+	解题思路
 
 & 两者同时为真才为真
 
@@ -25,7 +27,6 @@ https://leetcode.com/problems/single-number-ii/
 
 由以上可得知，相同数字做&运算，会得到相同的数字。
 
-
 | 两者一者为真就为真
 
 0010 0100
@@ -35,7 +36,6 @@ https://leetcode.com/problems/single-number-ii/
 0010 0100
 
 由以上可得知，相同数字做|运算，会得到相同的数字。
-
 
 ^ 相同为假，不同为真
 
@@ -48,8 +48,6 @@ https://leetcode.com/problems/single-number-ii/
 由以上可得知，相同数字做^异或运算，会得到0。
 
 由此延伸到题目中，可以得知，若存在一个数字只出现一次，那么该数组所有元素异或结果大于0.
-
-
 */
 func singleNumberTwo(nums []int) int {
 	res := 0

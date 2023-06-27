@@ -1,6 +1,6 @@
 package _938_range_sum_of_bst
 
-//Definition for a binary tree node.
+// Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode

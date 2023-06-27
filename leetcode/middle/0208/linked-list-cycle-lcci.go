@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//  分两步：确定是否有环，若有环则进入另一个循环找到入环的第一个节点即可
+// 分两步：确定是否有环，若有环则进入另一个循环找到入环的第一个节点即可
 func detectCycle(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return nil

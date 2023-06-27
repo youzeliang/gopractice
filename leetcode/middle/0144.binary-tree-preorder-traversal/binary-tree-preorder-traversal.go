@@ -23,7 +23,7 @@ func dfs(root *TreeNode) {
 	}
 }
 
-//迭代 （stack）
+// 迭代 （stack）
 func preorderTraversal1(root *TreeNode) []int {
 	var res []int
 	var stack []*TreeNode
