@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/spf13/cast"
+	//"github.com/spf13/cast"
 	"sort"
 	"strings"
 )
@@ -39,7 +39,7 @@ func main() {
 
 	aa := []int{1, 2, 3, 4}
 	for i := 0; i < len(aa); i++ {
-		buffer.WriteString(cast.ToString(aa[i]))
+		buffer.WriteString(string(i))
 		buffer.WriteString(",")
 	}
 

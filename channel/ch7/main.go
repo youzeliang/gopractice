@@ -44,5 +44,4 @@ package main
 //	cacheCh <- 2
 //	cacheCh <- 3
 //	fmt.Println("cacheCh容量为:", cap(cacheCh), ",元素个数为：", len(cacheCh))
-//>>>>>>> a703f98ddd2a69edb73774376288c62e722af039
 //}

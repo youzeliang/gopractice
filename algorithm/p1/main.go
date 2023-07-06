@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/spf13/cast"
+	//"github.com/spf13/cast"
 	"sort"
 
 	"strings"
@@ -20,7 +20,7 @@ func testString() {
 	var a = []int{1, 2, 3}
 
 	for _, j := range a {
-		topicIDList = append(topicIDList, cast.ToString(j))
+		topicIDList = append(topicIDList, string(j))
 	}
 
 	ss := strings.Join(topicIDList, ",")

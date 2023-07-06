@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"sync"
+)
+
 func main() {
 
 	fillOne(1000000, 1000000)

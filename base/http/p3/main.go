@@ -1,10 +1,12 @@
 package main
 
 import (
-<<<<<<< HEAD
+	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 )
 
 func sayhello(wr http.ResponseWriter, r *http.Request) {
@@ -18,18 +20,6 @@ func main() {
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
-=======
-	"fmt"
-	"io/ioutil"
-	"net/http"
-	"strings"
-)
-
-func main() {
-
-	url := "https://qz-test.oss-cn-beijing.aliyuncs.com/tools/en/text.txt"
-	res := HandleFile(url)
-	fmt.Println(res)
 }
 
 func HandleFile(url string) []interface{} {
@@ -52,5 +42,4 @@ func HandleFile(url string) []interface{} {
 		voiceIdList[i] = s
 	}
 	return voiceIdList
->>>>>>> 79fea1e7c0a9df79486c00c4a59be9b4cf592aad
 }

@@ -1,10 +1,11 @@
 package main
 
 import (
-<<<<<<< HEAD
+	"fmt"
 	"reflect"
 	"strings"
 	"testing"
+	"time"
 )
 
 func TestSplit(t *testing.T) { // 测试函数名必须以Test开头，必须接收一个*testing.T类型参数
@@ -20,11 +21,7 @@ func BenchmarkSplit(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		strings.Split("枯藤老树昏鸦", "老")
 	}
-=======
-	"fmt"
-	"testing"
-	"time"
-)
+}
 
 func BenchmarkFoo(b *testing.B) {
 	expensiveSetup()
@@ -36,5 +33,4 @@ func BenchmarkFoo(b *testing.B) {
 
 func expensiveSetup() {
 	time.Sleep(time.Second * 2)
->>>>>>> 9dad412f07f955fe7cf7c2792221d5e58f71b91e
 }
