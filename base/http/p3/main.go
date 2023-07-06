@@ -14,12 +14,20 @@ func sayhello(wr http.ResponseWriter, r *http.Request) {
 	io.WriteString(wr, "hello world")
 }
 
-func main() {
+func main1() {
 	http.HandleFunc("/", sayhello)
 	err := http.ListenAndServe(":9090", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
+<<<<<<< HEAD
+=======
+}
+
+func main() {
+
+	//url := "https://qz-test.oss-cn-beijing.aliyuncs.com/tools/en/text.txt"
+>>>>>>> 311f670673915048c9fba3166478a49d22978e9d
 }
 
 func HandleFile(url string) []interface{} {
