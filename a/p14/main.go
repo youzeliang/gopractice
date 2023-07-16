@@ -8,11 +8,8 @@ import (
 func main() {
 
 	for i := 0; i < 100000000000000000; i++ {
-<<<<<<< HEAD
 		hashID(string(i))
-=======
 		//hashID()
->>>>>>> 311f670673915048c9fba3166478a49d22978e9d
 	}
 
 }

@@ -18,9 +18,10 @@ func main() {
 		}
 	}()
 
-	tick := time.Tick(time.Second)
+	tick := time.Tick(time.Second * 1)
 	var buf []byte
 	stime := time.Now()
+
 	for range tick {
 		// 1秒1M内存
 		buf = append(buf, make([]byte, 1024*1024)...)
