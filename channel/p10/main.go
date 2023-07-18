@@ -76,4 +76,6 @@ func main() {
 	case <-time.After(time.Hour):
 	}
 
+	fmt.Println(stoppedBy)
+
 }

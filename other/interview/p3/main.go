@@ -32,7 +32,7 @@ func Question1(workload IWorkload) (err error) {
 
 	// ====== 在这里书写代码 ====== //
 
-	var a = &Demo{}
+	//var a = &Demo{}
 
 	return
 }

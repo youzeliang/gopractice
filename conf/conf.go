@@ -1,7 +1,6 @@
 package conf
 
 import (
-	"github.com/youzeliang/gopractice/base"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"path"
@@ -54,11 +53,11 @@ var Conf TConf
 func init() {
 	yamlFile, err := ioutil.ReadFile(getCurrentPath() + "/conf.yaml")
 	if err != nil {
-		base.PanicfLogger(nil, "yamlfile get error: %v ", err)
+		//base.PanicfLogger(nil, "yamlfile get error: %v ", err)
 	}
 	err = yaml.Unmarshal(yamlFile, &Conf)
 	if err != nil {
-		base.PanicfLogger(nil, "yaml unmarshal error: %v", err)
+		//base.PanicfLogger(nil, "yaml unmarshal error: %v", err)
 	}
 }
 

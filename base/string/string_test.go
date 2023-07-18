@@ -6,11 +6,11 @@ import (
 )
 
 func passedByValue(foo string) {
-	foo.C = "1"
+	//foo.C = "1"
 }
 
 func passedByPointer(bar *string) {
-	bar.C = "1"
+	//bar.C = "1"
 }
 
 // 值传递
@@ -21,7 +21,7 @@ func Benchmark_PassedByValue(b *testing.B) {
 	for i := 0; i < 10000000; i++ {
 		str.Write([]byte("====="))
 	}
-	val.C = str.String()
+	//val.C = str.String()
 
 	for i := 0; i < b.N; i++ {
 		passedByValue(val)
@@ -30,13 +30,13 @@ func Benchmark_PassedByValue(b *testing.B) {
 
 // 指针传递
 func Benchmark_PassedByPointer(b *testing.B) {
-	var val = new(Value)
+	//var val = new(Value)
 	str := bytes.Buffer{}
 	for i := 0; i < 10000000; i++ {
 		str.Write([]byte("====="))
 	}
-	val.C = str.String()
-	for i := 0; i < b.N; i++ {
-		passedByPointer(val)
-	}
+	//val.C = str.String()
+	//for i := 0; i < b.N; i++ {
+	//	passedByPointer(val)
+	//}
 }

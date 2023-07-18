@@ -37,9 +37,9 @@ func channelHandler(ctx context.Context, chanIdx int) int {
 	for {
 		select {
 		case request := <-reqChannels[chanIdx]:
-
+			fmt.Println(request)
 		case <-ctx.Done():
-			return
+			break
 		}
 	}
 }

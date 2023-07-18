@@ -20,14 +20,11 @@ func main1() {
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
-<<<<<<< HEAD
-=======
 }
 
 func main() {
 
 	//url := "https://qz-test.oss-cn-beijing.aliyuncs.com/tools/en/text.txt"
->>>>>>> 311f670673915048c9fba3166478a49d22978e9d
 }
 
 func HandleFile(url string) []interface{} {

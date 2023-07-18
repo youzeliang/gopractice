@@ -5,10 +5,7 @@ import (
 	"time"
 )
 
-func main() {
-
-}
-func main() {
+func main1() {
 	st := time.Now()
 	ch := make(chan bool)
 	go func() {

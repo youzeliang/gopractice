@@ -16,4 +16,6 @@ func TestName(t *testing.T) {
 		errors.New("fdsfsd")
 	}
 
+	fmt.Println(str)
+
 }

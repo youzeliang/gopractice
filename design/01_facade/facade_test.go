@@ -1,6 +1,9 @@
 package facade
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 var expect = "A module running\nB module running"
 
@@ -17,6 +20,9 @@ func TestFacadeAPI(t *testing.T) {
 
 	var z = []string{"3432", "432"}
 
+	fmt.Println(z)
+
 	var zzz = [][]string{{"fds", "fd", "fds"}}
 
+	fmt.Println(zzz)
 }
