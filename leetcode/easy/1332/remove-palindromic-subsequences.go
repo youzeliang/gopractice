@@ -1,4 +1,4 @@
-package _332__Remove_Palindromic_Subsequences
+package _332
 
 func removePalindromeSub(s string) int {
 	if len(s) == 0 {
