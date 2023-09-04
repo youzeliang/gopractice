@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 )
-
+// http://litang.me/post/golang-server-design/
 func longtimeCostFunc(ctx context.Context, c chan<- int) {
 	for i := 0; i < 10; i++ {
 		select {
