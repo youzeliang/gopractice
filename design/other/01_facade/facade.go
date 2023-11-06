@@ -9,7 +9,7 @@ func NewAPI() API {
 	}
 }
 
-// API is facade interview of facade package
+// API is facade inter of facade package
 type API interface {
 	Test() string
 }

@@ -6,8 +6,8 @@ func Afunction(ch chan int) {
 
 func main() {
 	var (
-		ch        chan int = make(chan int, 20) //可以同时运行的routine数量为20
-		dutycount int      = 500
+		ch        = make(chan int, 20) //可以同时运行的routine数量为20
+		dutycount = 500
 	)
 	for i := 0; i < dutycount; i++ {
 		go Afunction(ch)

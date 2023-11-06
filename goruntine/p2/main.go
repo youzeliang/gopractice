@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const NUM = 10000
+const NUM = 100000
 
 func cal() {
 	for i := 0; i < NUM; i++ {
