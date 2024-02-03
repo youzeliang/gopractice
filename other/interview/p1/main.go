@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	p4()
+	p2()
 }
 
 func p4() {
