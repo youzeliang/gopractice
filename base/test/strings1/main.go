@@ -1,7 +1,8 @@
 package main
 
-var aa = 1
+import "fmt"
 
 func main() {
 
+	fmt.Println(321)
 }

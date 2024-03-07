@@ -22,7 +22,6 @@ func main() {
 }
 
 func Producer(faction int, out chan<- int) {
-
 	for i := 0; ; i++ {
 		out <- faction * i
 	}
