@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	var arrayBefore10Mb [131072]int
+	var arrayBefore10Mb [1310720]int
 	arrayBefore10Mb[0] = 1
 
 	var arrayAfter10Mb [1310721]int
