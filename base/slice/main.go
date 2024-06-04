@@ -2,12 +2,28 @@ package main
 
 import (
 	"fmt"
+	"sync"
 )
 
 func main() {
 
-	//sl()
-	panic(321321)
+	a := make([]int, 0)
+
+	var wg sync.WaitGroup
+
+	for i := 0; i < 1000; i++ {
+
+		wg.Add(1)
+
+		go func(i int) {
+			a = append(a, i)
+			wg.Done()
+		}(i)
+	}
+
+	wg.Wait()
+
+	fmt.Println(len(a))
 
 }
 
