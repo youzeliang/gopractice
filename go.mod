@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/gin-gonic/gin v1.9.1
-	github.com/go-resty/resty/v2 v2.10.0
+	github.com/go-resty/resty/v2 v2.11.0
 	github.com/golang/protobuf v1.5.3
 	github.com/google/btree v1.1.2
 	github.com/mohuishou/go-design-pattern v1.0.0
