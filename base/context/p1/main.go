@@ -25,4 +25,5 @@ func main() {
 	}
 }
 
-//举一个例子来说明一下 Context 中的级联退出。下面的代码中 childCtx 是 preCtx 的子 Context，其设置的超时时间为 300ms。但是 preCtx 的超时时间为 100 ms，因此父 Context 退出后，子 Context 会立即退出，实际的等待时间只有 100ms。
+// 举一个例子来说明一下 Context 中的级联退出。下面的代码中 childCtx 是 preCtx 的子 Context，其设置的超时时间为 300ms。
+// 但是 preCtx 的超时时间为 100 ms，因此父 Context 退出后，子 Context 会立即退出，实际的等待时间只有 100ms。
