@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	var m1 map[string]int
 	var m2 = make(map[string]int)
@@ -15,4 +17,9 @@ func main() {
 	}
 
 	println(len(m1), len(m2))
+
+	contentList := make([]int, 4)
+
+	fmt.Println(contentList)
+
 }
