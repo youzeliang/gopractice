@@ -78,9 +78,9 @@ func main() {
 	}
 	fmt.Println("Print elements in the order of pushing:")
 	ml.Walk(cb)
-	fmt.Printf("Size of MapList: %d \n", ml.Size())
+	fmt.Printf("Size of MapList %d \n", ml.Size())
 	ml.Remove(b)
-	fmt.Println("After removing b:")
+	fmt.Println("After removing b")
 	ml.Walk(cb)
 	fmt.Printf("Size of MapList: %d \n", ml.Size())
 }
