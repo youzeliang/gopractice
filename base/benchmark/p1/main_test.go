@@ -34,4 +34,4 @@ func BenchmarkAppendMany(b *testing.B) {
 
 //  go test -bench . -benchmem
 // AppendMany每次进行操作进行1次的内存分配，每次内存分配，分配了81920 B, 每次操作耗时12241 ns，这些指标都好于AppendOne。
-//一次性分配需要的内存大小，slice不需要在扩大底层数组时进行内存分配，旧的底层数据依然能够复用，这显然减少了GC的压力。
+// 一次性分配需要的内存大小，slice不需要在扩大底层数组时进行内存分配，旧的底层数据依然能够复用，这显然减少了GC的压力。
