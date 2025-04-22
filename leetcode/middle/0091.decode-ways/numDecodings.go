@@ -1,7 +1,7 @@
 package _091_decode_ways
 
-//默认dp[i] = dp[i-1]
-//若s[i]与s[i-1]能构成1-26 则dp[i] += dp[i-2]
+// 默认dp[i] = dp[i-1]
+// 若s[i]与s[i-1]能构成1-26 则dp[i] += dp[i-2]
 
 func numDecodings(s string) int {
 	if s == "" || s == "0" {
