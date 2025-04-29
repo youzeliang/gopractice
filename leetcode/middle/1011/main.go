@@ -25,16 +25,16 @@ func shipWithinDays(weights []int, D int) int {
 		day = 0
 		for i := 0; i < m; i++ {
 			if todayCurWeight+weights[i] > mid {
-				//next day to handle
+				// next day to handle
 				day++
 				todayCurWeight = weights[i]
 			} else {
-				//today can handle
+				// today can handle
 				todayCurWeight += weights[i]
 			}
 		}
 		if day+1 <= D {
-			//最后不满足todayCurWeight+weights[i]>mid的那天也是一天，故+1
+			// 最后不满足todayCurWeight+weights[i]>mid的那天也是一天，故+1
 			r = mid
 		} else {
 			l = mid + 1
