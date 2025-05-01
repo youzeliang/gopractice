@@ -51,7 +51,7 @@ func cat(catch chan struct{}, counter int, fishch chan struct{}) {
 		case <-catch:
 			fmt.Println("cat")
 			cattimes++
-			//let fish run
+			// let fish run
 			fishch <- struct{}{}
 		}
 	}
@@ -75,7 +75,7 @@ func fish(fishch chan struct{}, counter int, dogch chan struct{}) {
 
 }
 
-//题解：
+// 题解：
 // 分别使用三个goroutine代表dog cat fish，由于携程执行的无顺序性，但是题目要求顺序循环输出，
 // 所以，我们使用通道来实现阻塞，通过传值到通道中来实现顺序执行
 // 首先定义了三个有缓冲通道 ，并设置了循环的次数counter
