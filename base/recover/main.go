@@ -11,7 +11,7 @@ func tes() {
 
 	defer func() {
 		if err := recover(); err != nil {
-			fmt.Println(11111)
+			fmt.Println(11)
 		}
 	}()
 
