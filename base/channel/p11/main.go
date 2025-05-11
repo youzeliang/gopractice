@@ -9,6 +9,7 @@ func main() {
 	leak1()
 }
 
+// 无缓冲通道。对于无缓冲通道，发送操作会阻塞，直到有接收方准备好接收数据。
 func leak1() {
 	ch := make(chan int)
 	// g1
