@@ -14,6 +14,6 @@ func main() {
 		_, _ = ioutil.ReadAll(resp.Body)
 		fmt.Printf("此时goroutine个数= %d\n", runtime.NumGoroutine())
 
-		resp.Body.Close()
+		//resp.Body.Close()
 	}
 }
