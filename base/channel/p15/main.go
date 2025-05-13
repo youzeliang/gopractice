@@ -11,7 +11,7 @@ import (
 func main() {
 	var t1 = makeTask("adoJob", 1000)
 	var t2 = makeTask("xs25Job", 500)
-	//var tick = time.Tick(time.Millisecond * 1)
+	// var tick = time.Tick(time.Millisecond * 1)
 	for {
 		select {
 		case task := <-t1:
@@ -33,7 +33,7 @@ func makeTask(queueName string, n int) chan string {
 	go func() {
 		i := 1
 		for {
-			time.Sleep(time.Millisecond * time.Duration(rand.Intn(2000))) //假设生产任务占用时间
+			time.Sleep(time.Millisecond * time.Duration(rand.Intn(2000))) // 假设生产任务占用时间
 			ch <- fmt.Sprintf("%s,生产数据 %d", queueName, i)
 			i++
 		}
