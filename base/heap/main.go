@@ -7,15 +7,6 @@ import (
 	"time"
 )
 
-package main
-
-import (
-"container/heap"
-"fmt"
-"math/rand"
-"time"
-)
-
 // 定义最小堆类型（基于整型切片）
 type MinHeap []int
 
