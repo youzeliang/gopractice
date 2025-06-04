@@ -66,6 +66,6 @@ func main() {
 	top100 := findTop100(data)
 	elapsed := time.Since(start)
 
-	//fmt.Printf("Top 100 values: %v\n", top100)
+	fmt.Printf("Top 100 values: %v\n", top100)
 	fmt.Printf("Execution time: %s\n", elapsed)
 }
